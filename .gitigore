@@ -2,3 +2,5 @@
 *.xmi
 *.resources
 .metadata/*
+target
+.idea
