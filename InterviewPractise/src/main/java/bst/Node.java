@@ -11,4 +11,8 @@ public class Node {
     public Node(int value) {
         this.value = value;
     }
+
+    public boolean isLeaf() {
+        return left == null && right == null;
+    }
 }

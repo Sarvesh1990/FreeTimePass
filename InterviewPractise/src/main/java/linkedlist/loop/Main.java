@@ -1,5 +1,8 @@
 package linkedlist.loop;
 
+import linkedlist.LinkedList;
+import linkedlist.Node;
+
 /**
  * Created by apple on 18/02/17.
  */
