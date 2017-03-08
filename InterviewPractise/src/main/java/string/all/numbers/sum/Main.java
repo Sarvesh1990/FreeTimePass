@@ -10,8 +10,7 @@ import static java.lang.Math.pow;
  */
 public class Main {
     public static void main(String[] args) {
-        printAllNums("12" +
-                "");
+        printAllNums("12");
     }
 
     private static void printAllNums(String s) {
