@@ -3,7 +3,7 @@ package arrays.contiguous.sum.n;
 /**
  * Created by apple on 19/02/17.
  */
-public class Main {
+public class    Main {
     public static void main(String[] args) {
         int[] array = {1, 2, 4, 2, 5, 2, 3};
         printIndex(array, 5);
