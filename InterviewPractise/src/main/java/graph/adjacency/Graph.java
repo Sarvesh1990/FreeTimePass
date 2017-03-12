@@ -7,7 +7,7 @@ import java.util.Stack;
  * Created by apple on 27/02/17.
  */
 public class Graph {
-    private static LinkedList<Integer>[] graph;
+    public static LinkedList<Integer>[] graph;
     private static boolean[] bfsVisited;
     private static boolean[] dfsVisited;
     private static boolean[] recStack;
