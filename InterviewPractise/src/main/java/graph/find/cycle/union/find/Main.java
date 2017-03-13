@@ -7,12 +7,12 @@ import graph.adjacency.Graph;
  */
 public class Main {
     public static void main(String[] args) {
-        Graph graph = new Graph(3);
+        Graph graph = new Graph(4);
         graph.addVertex(0, 1);
         graph.addVertex(1, 2);
-        graph.addVertex(2, 1);
+        graph.addVertex(0, 3);
 
-        System.out.println(findIfCycle(graph, 3));
+        System.out.println(findIfCycle(graph, 4));
     }
 
     private static boolean findIfCycle(Graph graph, int vertices) {
@@ -35,14 +35,15 @@ public class Main {
 
     private static void union(int from, int to, int[] parent) {
         int parentFrom = findUltimateParent(from, parent);
-        parent[parentFrom] = to;
+        int parentTo = findUltimateParent(to, parent);
+        parent[parentFrom] = parentTo;
     }
 
     private static boolean checkIfCycle(int from, int to, int[] parent) {
         int parentFrom = findUltimateParent(from, parent);
         int parentTo = findUltimateParent(to, parent);
 
-        return parentFrom == parentTo && parentFrom != -1;
+        return parentFrom == parentTo;
     }
 
     private static int findUltimateParent(int vertex, int[] parent) {
