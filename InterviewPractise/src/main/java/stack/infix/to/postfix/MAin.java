@@ -1,5 +1,7 @@
 package stack.infix.to.postfix;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Stack;
 
 /**
@@ -7,7 +9,20 @@ import java.util.Stack;
  */
 public class MAin {
     public static void main(String[] args) {
-        String str = "3+4+5*6*7-3";
+        String str = "a+b*(c*d-e)*(f+g*h)-i";
+        Map<Character, String> map = new HashMap<>();
+        int count = 1;
+
+        for(int i = 0; i < str.length(); i++) {
+            if(str.charAt(i) == '(') {
+                String subStr = "";
+                i++;
+                while(str.charAt(i) != ')') {
+                    subStr = subStr + str.charAt(i);
+                    i++;
+                }
+            }
+        }
         System.out.println(infixToPostfix(str));
     }
 

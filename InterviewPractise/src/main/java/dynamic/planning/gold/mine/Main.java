@@ -14,7 +14,7 @@ public class Main {
 
         System.out.println(getMaxGold(goldMine, n, m));
     }
-    
+
     private static int getMaxGold(int[][] goldMine, int n, int m) {
         int[][] maxGold = new int[n][m];
         for(int i = m - 1; i >= 0; i--) {
