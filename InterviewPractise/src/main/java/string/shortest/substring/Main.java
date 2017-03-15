@@ -1,5 +1,8 @@
 package string.shortest.substring;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import static java.lang.Math.min;
 import static sun.swing.MenuItemLayoutHelper.max;
 
@@ -8,44 +11,69 @@ import static sun.swing.MenuItemLayoutHelper.max;
  */
 public class Main {
     public static void main(String[] args) {
-        shortestSubstring("abccac", "abc");
+        shortestSubstring("a", "abc");
     }
 
-    private static void shortestSubstring(String first, String second) {
-        if(second.length() == 0) {
-            System.out.println("");
-            return;
+    private static void shortestSubstring(String mainStr, String smallStr) {
+        String shortestSubString = mainStr;
+        String currentString = "";
+        int startIndex = 0;
+        boolean shortestFound = false;
+        Map<Character, Integer> alphabetCount = new HashMap<>();
+
+        for(int i = 0; i < smallStr.length(); i++) {
+            alphabetCount.put(smallStr.charAt(i), 0);
         }
 
-        StringBuilder shortestSubStr = new StringBuilder("");
-        StringBuilder modifiedSecondStr = new StringBuilder(second);
+        for(int i = 0; i < mainStr.length(); i++) {
+            if(alphabetCount.containsKey(mainStr.charAt(i))) {
+                alphabetCount.put(mainStr.charAt(i), alphabetCount.get(mainStr.charAt(i)) + 1);
+            }
 
-        int min = Integer.MAX_VALUE;
+            boolean allCharPresent = true;
+            for(Character key : alphabetCount.keySet()) {
+                if(alphabetCount.get(key) == 0) {
+                    allCharPresent = false;
+                    break;
+                }
+            }
 
-        for(int i = 0; i < first.length(); i++) {
-            int index = modifiedSecondStr.indexOf(String.valueOf(first.charAt(i)));
-            if(index >= 0) {
-                shortestSubStr.append(first.charAt(i));
-                modifiedSecondStr.deleteCharAt(index);
-
-            } else {
-                if(shortestSubStr.length() != 0) {
-                    if(shortestSubStr.charAt(0) != first.charAt(i)) {
-                        shortestSubStr.append(first.charAt(i));
-                    } else {
-                        shortestSubStr.deleteCharAt(0);
-                        for(int j = 1; j < i; j++ ) {
-                            if(second.indexOf(shortestSubStr.charAt(j)) < 0) {
-                                shortestSubStr.deleteCharAt(j);
-                            } else {
+            if(allCharPresent) {
+                currentString = mainStr.substring(startIndex, i + 1);
+                if(currentString.length() < shortestSubString.length()) {
+                    shortestFound = true;
+                    shortestSubString = currentString;
+                }
+                for(int j = startIndex; j <= i; j++) {
+                    startIndex++;
+                    if(alphabetCount.containsKey(mainStr.charAt(j))) {
+                        alphabetCount.put(mainStr.charAt(j), alphabetCount.get(mainStr.charAt(j)) - 1);
+                        for(Character key : alphabetCount.keySet()) {
+                            if(alphabetCount.get(key) == 0) {
+                                allCharPresent = false;
                                 break;
                             }
                         }
+                        if(allCharPresent) {
+                            currentString = currentString.substring(1, currentString.length());
+                        }
+                    } else {
+                        currentString = currentString.substring(1, currentString.length());
+                    }
+                    if(!allCharPresent) {
+                        if(currentString.length() < shortestSubString.length()) {
+                            shortestSubString = currentString;
+                        }
+                        break;
                     }
                 }
             }
         }
-        System.out.println(shortestSubStr.toString());
-
+        if(shortestFound)
+            System.out.println(shortestSubString);
+        else
+            System.out.println("No shortest substr");
     }
+
+
 }
