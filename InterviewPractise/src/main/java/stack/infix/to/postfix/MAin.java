@@ -1,44 +1,94 @@
 package stack.infix.to.postfix;
 
-import java.util.Stack;
+import java.util.*;
 
 /**
  * Created by sarvesh on 14/3/17.
  */
 public class MAin {
     public static void main(String[] args) {
-        String str = "3+4+5*6*7-3";
-        System.out.println(infixToPostfix(str));
+        String str = "a+b+c*d-e^g*f";
+        Map<Character, ArrayList<Character>> precedenceMap = new HashMap<>();
+        precedenceMap = buildPrecedenceMap();
+
+        System.out.println(infixToPostfix(str, precedenceMap));
     }
 
-    private static String infixToPostfix(String str) {
-        Stack<Character> postFixStack = new Stack();
-        Stack tempStack = new Stack();
-
-        postFixStack.push(str.charAt(0));
-
-        int i = 2;
-        Character currentLowest = null;
-
-        while(i < str.length()) {
-            postFixStack.push(str.charAt(i));
-            postFixStack.push(str.charAt(i - 1));
-            if(currentLowest == null) {
-                currentLowest = str.charAt(i - 1);
-            } else {
-                if((currentLowest == '+' || currentLowest == '-') && (str.charAt(i - 1) == '*'  || str.charAt(i - 1) == '/')) {
-                    Character element = postFixStack.pop();
-                    Character number = postFixStack.pop();
-                    Character currentLowestChar = postFixStack.pop();
-
-                    postFixStack.push(number);
-                    postFixStack.push(element);
-                    postFixStack.push(currentLowestChar);
-                }
+    private static Map<Character,ArrayList<Character>> buildPrecedenceMap() {
+        Map<Character, ArrayList<Character>> precedenceMap = new HashMap<>();
+        precedenceMap.put('+', new ArrayList<Character>(){
+            {
+                add('*');
+                add('/');
+                add('^');
             }
-            currentLowest = postFixStack.peek();
-            i = i + 2;
+        });
+        precedenceMap.put('-', new ArrayList<Character>(){
+            {
+                add('*');
+                add('/');
+                add('^');
+            }
+        });
+        precedenceMap.put('*', new ArrayList<Character>(){
+            {
+                add('^');
+            }
+        });
+        precedenceMap.put('/', new ArrayList<Character>(){
+            {
+                add('^');
+            }
+        });
+        precedenceMap.put('^', new ArrayList<Character>());
+
+        return precedenceMap;
+    };
+
+    private static String infixToPostfix(String str, Map<Character,ArrayList<Character>> precedenceMap) {
+        Stack<Character> operandStack = new Stack<Character>();
+        String postFixStr = "";
+
+        for(int i = 0; i < str.length(); i++) {
+            if(str.charAt(i) == '(') {
+                operandStack.push(str.charAt(i));
+            } else if (str.charAt(i) == ')') {
+                while(operandStack.peek() != '(') {
+                    postFixStr = postFixStr + operandStack.pop();
+                }
+                operandStack.pop();
+            } else if(str.charAt(i) == '+' || str.charAt(i) == '-' || str.charAt(i) == '*' || str.charAt(i) == '/' || str.charAt(i) == '^') {
+                if(operandStack.isEmpty()) {
+                    operandStack.push(str.charAt(i));
+                } else {
+                    Character lastChar = operandStack.peek();
+                    if (lastChar.equals('(') || precedenceMap.get(lastChar).contains(str.charAt(i))) {
+                        operandStack.push(str.charAt(i));
+                    } else {
+                        while (!operandStack.isEmpty()) {
+                            if(operandStack.peek() == '(') {
+                                break;
+                            }
+                            if(!precedenceMap.get(str.charAt(i)).contains(operandStack.peek())) {
+                                break;
+                            }
+                            postFixStr = postFixStr + operandStack.pop();
+                        }
+                        operandStack.push(str.charAt(i));
+                    }
+                }
+            } else {
+                postFixStr = postFixStr + str.charAt(i);
+            }
         }
-        return postFixStack.toString();
+
+        while(!operandStack.isEmpty()) {
+            postFixStr = postFixStr + operandStack.pop();
+        }
+
+        return postFixStr;
+
     }
+
+
 }
