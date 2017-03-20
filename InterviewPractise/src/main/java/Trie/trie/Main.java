@@ -1,4 +1,4 @@
-package arrays.trie;
+package Trie.trie;
 
 /**
  * Created by sarvesh on 12/3/17.

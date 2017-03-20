@@ -1,6 +1,6 @@
-package arrays.trie.count.words;
+package Trie.trie.count.words;
 
-import arrays.trie.Trie;
+import Trie.trie.Trie;
 
 import java.util.HashMap;
 import java.util.Map;
