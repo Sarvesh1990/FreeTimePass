@@ -5,7 +5,7 @@ package string.k.unique;
  */
 public class Main {
     public static void main(String[] args) {
-        findKUnique("aababbcbcccccddddc", 2);
+        findKUnique("asdfrttt", 3);
     }
 
     private static void findKUnique (String str, int k) {
