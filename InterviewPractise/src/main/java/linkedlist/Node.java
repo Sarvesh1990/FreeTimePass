@@ -11,6 +11,9 @@ public class Node {
         this.value = value;
     }
 
+    public Node() {
+    }
+
     public Node(Integer value, Node next) {
         this.value = value;
         this.next = next;

@@ -12,6 +12,9 @@ public class LinkedList {
         size = size + 1;
     }
 
+    public LinkedList() {
+    }
+
     public Node getHead() {
         return head;
     }
