@@ -1,35 +1,40 @@
 package string.justification;
 
+import java.util.LinkedList;
+import java.util.List;
+
 /**
  * Created by apple on 15/03/17.
  */
 public class Main {
     public static void main(String[] args) {
-        String str = "This is a example of text just ific ation and";
-        justify(str, 16);
+        String str = "a b c d e";
+        System.out.println(justify(str.split(" "), 1));
     }
 
-    private static void justify(String str, int length) {
-        String[] words = str.split(" ");
+    private static List<String> justify(String[] words, int maxWidth) {
+        List<String> list = new LinkedList<>();
         int sum = 0;
         int start = 0;
         int sumSpaces = -1;
         for(int i = 0; i < words.length; i++) {
             sum = sum + words[i].length();
             sumSpaces = sumSpaces + 1;
-            if(sum + sumSpaces > length) {
+            if(sum + sumSpaces > maxWidth) {
                 i--;
                 int numWords = i - start + 1;
-                int extraChars = length - (sum + sumSpaces -1 - words[i+1].length());
-                int space = extraChars/(numWords - 1);
+                int extraChars = maxWidth - (sum + sumSpaces -1 - words[i+1].length());
+                int space = 0;
+                if(numWords > 1)
+                    space = extraChars/(numWords - 1);
                 String line = "";
                 for(int j = start; j < i; j++) {
-                    line = line + words[j] + "+";
+                    line = line + words[j] + " ";
                     for(int k = 0; k < space; k++) {
-                        line = line + "+";
+                        line = line + " ";
                     }
                     if(extraChars % (numWords - 1) > 0) {
-                        line = line + "+";
+                        line = line + " ";
                         extraChars--;
                     }
                 }
@@ -42,12 +47,13 @@ public class Main {
             if(i == words.length - 1) {
                 String line = "";
                 for(int j = start; j < words.length - 1; j++) {
-                    line = line + words[j] + "+";
+                    line = line + words[j] + " ";
                 }
                 line = line + words[words.length - 1];
-                System.out.println(line);
+                list.add(line);
             }
         }
+        return list;
     }
 }
 
