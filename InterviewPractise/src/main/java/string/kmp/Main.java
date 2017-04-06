@@ -5,7 +5,7 @@ package string.kmp;
  */
 public class Main {
     public static void main(String[] args) {
-        String str = "AABAACAADAABAABA";
+        String str = "AABAACAADAAAABA";
         String pat = "AABA";
         findMatchingIndex(str, pat);
     }
@@ -15,26 +15,43 @@ public class Main {
 
         lps[0] = 0;
 
-        for(int i = 1; i < lps.length; i++) {
-            int count = 0;
-            int j = i;
-            int k = j - 1;
-            while(j > 0 && k >= 0) {
-                while(pat.charAt(j) == pat.charAt(k)) {
-                    j--;
-                    k--;
-                    count++;
+        int len = 0;
+
+        for(int i = 1; i < pat.length(); i++) {
+            if(pat.charAt(len) == pat.charAt(i)) {
+                len++;
+                lps[i] = len;
+            } else {
+                while (len > 0) {
+                    if(pat.charAt(len) == pat.charAt(i)) {
+                        len++;
+                        break;
+                    } else {
+                        len = lps[len - 1];
+                    }
                 }
-                if(j == 0) {
-                    lps[i] = count;
-                } else {
-                    j = i;
-                }
+                lps[i] = len;
             }
         }
 
-        for(int i = 0; i < lps.length; i++) {
-            System.out.println(lps[i]);
+        int j = 0;
+        int i = 0;
+
+        while(i < str.length()) {
+            if(str.charAt(i) == pat.charAt(j)) {
+                i++;
+                j++;
+                if(j == pat.length()) {
+                    System.out.println("Pattern found at " + (i - j));
+                    j = lps[j - 1];
+                }
+            } else {
+                if(j != 0) {
+                    j = lps[j - 1];
+                } else {
+                    i++;
+                }
+            }
         }
     }
 

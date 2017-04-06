@@ -6,7 +6,22 @@ package string.justification;
 public class Main {
     public static void main(String[] args) {
         String str = "This is a example of text just ific ation and";
-        justify(str, 16);
+//        justify(str, 16);
+       long sum = Long.valueOf(46340) * Long.valueOf(46340);
+        System.out.println(sum);
+        System.out.println(mySqrt(2147483647));
+    }
+
+    public static int mySqrt(int x) {
+        long xLong = Long.valueOf(x);
+        for(int i = 0; i <= xLong + 1; i++) {
+            long sum = Long.valueOf(i) * Long.valueOf(i);
+            if(sum > xLong) {
+                return i - 1;
+            }
+        }
+        return -1;
+
     }
 
     private static void justify(String str, int length) {
