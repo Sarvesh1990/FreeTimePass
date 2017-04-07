@@ -1,8 +1,6 @@
 package arrays.subsets;
 
-import java.util.Collections;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by sarvesh on 6/4/17.
@@ -10,17 +8,20 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        int[] nums = new int[] {1, 2 ,3, 4};
+        int[] nums = new int[] {1, 2 , 2};
         System.out.println(subsets(nums));
     }
 
     private static List<List<Integer>> subsets(int[] nums) {
-        List<List<Integer>> subsetList = subSetHelper(nums, nums.length);
-        return subsetList;
+        Arrays.sort(nums);
+        Set<List<Integer>> subsetList = subSetHelper(nums, nums.length);
+        List<List<Integer>> subset = new LinkedList<>();
+        subset.addAll(subsetList);
+        return subset;
     }
 
-    private static List<List<Integer>> subSetHelper(int[] sums, int length) {
-        List<List<Integer>> subsetList = new LinkedList<>();
+    private static Set<List<Integer>> subSetHelper(int[] sums, int length) {
+        Set<List<Integer>> subsetList = new HashSet<>();
         if(length == 1) {
             subsetList.add(new LinkedList<Integer>(){
                 {
