@@ -14,6 +14,9 @@ public class Trie {
         Trie[] tempChar = characters;
         for(int i = 0; i < word.length(); i++) {
             if(tempChar[word.charAt(i) - 97] != null) {
+                if(i == word.length() - 1) {
+                    tempChar[word.charAt(i) - 97].isLeaf = true;
+                }
                 tempChar = tempChar[word.charAt(i) - 97].characters;
             } else {
                 Trie trie = new Trie();
@@ -33,7 +36,26 @@ public class Trie {
             if(tempChar[word.charAt(i) - 97] == null) {
                 return false;
             }
+            if(i == word.length() - 1) {
+                if(!tempChar[word.charAt(i) - 97].isLeaf) {
+                    return false;
+                } else {
+                    return true;
+                }
+            }
             tempChar = tempChar[word.charAt(i) - 97].characters;
+
+        }
+        return true;
+    }
+
+    public boolean startsWith(String prefix) {
+        Trie[] tempChar = characters;
+        for(int i = 0; i < prefix.length(); i++) {
+            if(tempChar[prefix.charAt(i) - 97] == null) {
+                return false;
+            }
+            tempChar = tempChar[prefix.charAt(i) - 97].characters;
         }
         return true;
     }
