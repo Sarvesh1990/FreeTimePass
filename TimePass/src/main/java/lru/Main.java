@@ -8,16 +8,12 @@ import java.util.Map;
  */
 public class Main {
     public static void main(String[] args) {
-        Map<Integer, Integer> lruMap = new LinkedHashMap<Integer, Integer>(2, 1, true);
-        lruMap.put(1, 1);
-        lruMap.put(3, 3);
-        lruMap.put(2, 3);
-        lruMap.put(4, 3);
-        lruMap.put(5, 3);
-        lruMap.put(6, 3);
-
-        lruMap.get(3);
-
-        System.out.println(lruMap);
+        LRUCache lruCache = new LRUCache(2);
+        lruCache.put(1, 2);
+        lruCache.put(2, 3);
+        lruCache.put(3, 4);
+        System.out.println(lruCache.get(2));
+        lruCache.put(4, 5);
+        System.out.println(lruCache.get(2));
     }
 }
