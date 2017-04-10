@@ -5,7 +5,7 @@ package arrays.share.prices;
  */
 public class Main {
     public static void main(String[] args) {
-        int[] stockPrices = {100, 180, 260, 310, 40, 535, 695, 120, 30, 40, 40, 20, 10, 15};
+        int[] stockPrices = {100, 180, 260, 310, 40, 535, 695, 120, 30, 10, 40, 20, 10, 15};
         int currentMinimum = 0;
         int maxDifference = 0;
 

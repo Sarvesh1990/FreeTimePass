@@ -18,7 +18,7 @@ public class Main {
         bst.insert(10, bst.head);
         bst.insert(14, bst.head);
 
-        System.out.println(inorderSuccessor(bst.head, 2, -1));
+        System.out.println(inorderSuccessor(bst.head, 8, -1));
     }
 
     private static Integer inorderSuccessor(Node head, int k, int currentSuccessor) {

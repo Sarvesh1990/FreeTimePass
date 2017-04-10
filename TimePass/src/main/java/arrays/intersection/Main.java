@@ -1,4 +1,4 @@
-package src.main.java.arrays.intersection;
+package arrays.intersection;
 
 /**
  * Created by apple on 12/03/17.
