@@ -5,7 +5,7 @@ package arrays.two.stocks;
  */
 public class Main {
     public static void main(String[] args) {
-        int[] stockPrices = new int[] {3, 3, 5, 0, 0, 3, 1, 4};
+        int[] stockPrices = new int[] {12, 14, 17, 10, 14, 13, 12, 15};
         System.out.println(maximumStockPrices(stockPrices));
     }
 

@@ -8,15 +8,16 @@ import java.util.jar.Pack200;
  */
 public class Main {
     public static void main(String[] args) {
-        int[] stockPrices = new int[] {3, 3, 5, 0, 0, 3, 1, 4};
-        System.out.print(maxProfit(0, stockPrices));
+        int[] stockPrices = new int[] {12, 14, 17, 10, 14, 13, 12, 15};
+        System.out.print(maxProfit(3, stockPrices));
     }
 
     public static long maxProfit(int k, int [] stockPrices) {
         if(stockPrices.length > 0) {
-
             long[] maxProfitArray = new long[stockPrices.length];
+            
             for (int i = 0; i < k; i++) {
+
                 maxProfitArray = getMaxProfit(stockPrices, maxProfitArray);
             }
             return maxProfitArray[stockPrices.length - 1];
