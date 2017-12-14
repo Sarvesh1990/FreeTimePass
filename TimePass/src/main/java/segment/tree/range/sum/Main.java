@@ -10,11 +10,14 @@ import static java.lang.Math.pow;
  */
 public class Main {
     public static void main(String[] args) {
-        int[] array = new int[] {1, 3, 5, 7, 9, 11};
+        int[] array = new int[] {-2, 0, 3, -5, 2, -1};
+        System.out.println((double) 2 / 6);
         int STSize = getSizeST(array.length);
         int[] segmentTree = new int[STSize];
         createSegmentTree(array, segmentTree, 0, array.length - 1, 0);
-        System.out.println(findSum(segmentTree, 0, 5, 3, 4, 0));
+        System.out.println(findSum(segmentTree, 0, 5, 0, 2, 0));
+        System.out.println(findSum(segmentTree, 0, 5, 0, 5, 0));
+        System.out.println(findSum(segmentTree, 0, 5, 2, 5, 0));
         updateValue(segmentTree, 0, 5,4, 11, 0);
         updateValue(segmentTree, 0, 5,3, 5, 0);
         updateValue(segmentTree, 0, 5,2, 3, 0);

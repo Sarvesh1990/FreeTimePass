@@ -11,7 +11,7 @@ import static sun.swing.MenuItemLayoutHelper.max;
  */
 public class Main {
     public static void main(String[] args) {
-        shortestSubstring("a", "abc");
+        shortestSubstring("abc", "abc");
     }
 
     private static void shortestSubstring(String mainStr, String smallStr) {

@@ -6,7 +6,7 @@ import java.util.Map;
 /**
  * Created by apple on 21/02/17.
  */
-public class Main {
+public class  Main {
     public static void main(String[] args) {
         System.out.println(getIndex(new int[] {1, 2, 3, 4, 5, 1, 2, 9, 10, 11, 1, 2, 3, 4, 5, 6}));
     }
