@@ -1,5 +1,7 @@
 package segment.tree.toggle;
 
+import java.util.Arrays;
+
 /**
  * Created by apple on 08/03/17.
  */
@@ -13,11 +15,18 @@ public class Main {
             segmentTree[i] = 0;
         }
 
+        System.out.println(Arrays.toString(segmentTree));
         updateValue(segmentTree, 0, n - 1,1, 2, 0);
+        System.out.println(Arrays.toString(segmentTree));
         updateValue(segmentTree, 0, n - 1,2, 4, 0);
+        System.out.println(Arrays.toString(segmentTree));
         System.out.println(countInRange(segmentTree, 0, n - 1, 2, 3, 0));
         updateValue(segmentTree, 0, n - 1,2, 4, 0);
-        System.out.println(countInRange(segmentTree, 0, n - 1, 1, 4, 0));
+        updateValue(segmentTree, 0, n - 1,3, 4, 0);
+        System.out.println(countInRange(segmentTree, 0, n - 1, 1, 5, 0));
+        System.out.println(Arrays.toString(segmentTree));
+        updateValue(segmentTree, 0, n - 1,0, 4, 0);
+        System.out.println(countInRange(segmentTree, 0, n - 1, 0, 4, 0));
 
 
     }
@@ -52,16 +61,8 @@ public class Main {
         if(low == high) {
             if(segmentTree[position] == 0) {
                 segmentTree[position] = 1;
-                while((position - 1)/2 >= 0 && position != 0) {
-                    segmentTree[(position - 1)/2] = segmentTree[(position - 1)/2] + 1;
-                    position = (position - 1)/2;
-                }
             } else {
                 segmentTree[position] = 0;
-                while((position - 1)/2 >= 0 && position != 0) {
-                    segmentTree[(position - 1)/2] = segmentTree[(position - 1)/2] - 1;
-                    position = (position - 1)/2;
-                }
             }
             return;
         }
@@ -69,5 +70,7 @@ public class Main {
         int mid = low + (high - low)/2;
         updateValue(segmentTree, low, mid, start, end, 2 * position + 1);
         updateValue(segmentTree, mid + 1, high, start, end, 2 * position + 2);
+
+        segmentTree[position] = segmentTree[2*position + 1] + segmentTree[2*position + 2];
     }
 }
