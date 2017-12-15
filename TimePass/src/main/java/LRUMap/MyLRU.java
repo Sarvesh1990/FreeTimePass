@@ -2,37 +2,34 @@ package LRUMap;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReadWriteLock;
+import java.util.concurrent.locks.ReentrantLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 /**
  * Created by apple on 15/12/17.
  */
-public class MyLRU <K, V> {
-    private LRU<K, V> lru;
-    private ReadWriteLock readWriteLock = new ReentrantReadWriteLock();
+public class MyLRU <K, V> implements LRU<K, V>{
+    private LRUMap<K, V> lruMap;
+    private ReentrantLock lock = new ReentrantLock();
 
     public MyLRU(int capacity) {
-        lru = new LRU<K, V>(capacity);
+        lruMap = new LRUMap<K, V>(capacity);
     }
 
-    public boolean add(K key, V value) {
-        Lock lock = readWriteLock.writeLock();
-        boolean isAdded = lru.add(key, value);
+    public void add(K key, V value) {
+        lock.lock();
+        lruMap.addToLRUMap(key, value);
         lock.unlock();
-        return isAdded;
     }
 
-    public boolean evict(K key) {
-        readWriteLock.writeLock();
-        boolean isEvicted = lru.evict(key);
-        readWriteLock.writeLock();
-        return isEvicted;
+    public void evict(K key) {
+        lock.lock();
+        lruMap.evict(key);
     }
 
     public V get(K key) {
-        readWriteLock.readLock();
-        V value = lru.get(key);
-        readWriteLock.readLock();
+        lock.lock();
+        V value = lruMap.get(key);
         return value;
     }
 }

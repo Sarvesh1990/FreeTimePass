@@ -8,24 +8,24 @@ import java.util.Map;
 /**
  * Created by apple on 15/12/17.
  */
-public class LRUMap <K, V> {
-    private Map<K, V> linkedMap;
-    private CustomLinkedList customLinkedList;
+public class LRUMap <K, V> extends LinkedHashMap<K, V> {
+    public int capacity;
 
     public LRUMap(int capacity) {
-        this.linkedMap = new HashMap<K, V>();
-        this.customLinkedList = new CustomLinkedList(capacity);
+        super(capacity);
+        this.capacity = capacity;
+
     }
 
-    public boolean addToLRUMap(K key, V value) {
-        return false;
+    public V addToLRUMap(K key, V value) {
+        return super.put(key, value);
     }
 
-    public boolean evict (K key) {
-        return false;
+    public V evict (K key) {
+        return super.remove(key);
     }
 
-    public V get (K key) {
-        return linkedMap.get(key);
+    public V getKey(K key) {
+        return super.get(key);
     }
 }
