@@ -5,7 +5,7 @@ package string.k.unique;
  */
 public class Main {
     public static void main(String[] args) {
-        findKUnique("asdfrttt", 3);
+        findKUnique("abcbbbbcccbdddadacb", 2);
     }
 
     private static void findKUnique (String str, int k) {
@@ -63,6 +63,6 @@ public class Main {
                 }
             }
         }
-        System.out.println(maxCount);
+        System.out.println(str.substring(maxStartIndex, maxEndIndex + 1));
     }
 }

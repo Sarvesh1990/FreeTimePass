@@ -5,29 +5,30 @@ package dynamic.planning.coin.change;
  */
 public class DP {
     public static void main(String[] args) {
-        int[] coins = new int[] {2, 5, 3, 6};
-        int n = 10;
+        int[] coins = new int[] {1, 2, 3};
+        int n = 4;
+        System.out.println("123".substring(0));
 
-        System.out.println(totalCombination(coins, n));
+        System.out.println(combinationSum4(coins, n));
     }
 
-    private static Integer totalCombination(int[] coins, int n) {
-        int[][] totalComb = new int[n + 1][coins.length + 1];
-        for(int i = 0; i <= n; i++) {
-            for(int j = 0; j <= coins.length; j++) {
+    private static Integer combinationSum4(int[] nums, int target) {
+        int[][] totalComb = new int[target + 1][nums.length + 1];
+        for(int i = 0; i <= target; i++) {
+            for(int j = 0; j <= nums.length; j++) {
                 if(i == 0 )  {
                     totalComb[i][j] = 1;
                 } else if (j == 0 && i != 0) {
                     totalComb[i][j] = 0;
                 } else {
-                    if(coins[j - 1] <= i) {
-                        totalComb[i][j] = totalComb[i][j] +  totalComb[i - coins[j - 1]][j];
+                    if(nums[j - 1] <= i) {
+                        totalComb[i][j] = totalComb[i][j] +  totalComb[i - nums[j - 1]][nums.length];
                     }
                     totalComb[i][j] = totalComb[i][j] + (totalComb[i][j - 1] > 0 ? totalComb[i][j - 1] : 0);
 
                 }
             }
         }
-        return  totalComb[n][coins.length];
+        return  totalComb[target][nums.length];
     }
 }

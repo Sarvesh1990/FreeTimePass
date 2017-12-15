@@ -5,7 +5,7 @@ package string.string.from.same.substring.n;
  */
 public class Main {
     public static void main(String[] args) {
-        String str = "aa";
+        String str = "aab";
         System.out.println(checkIfStringFormedFromSameSubstring(str));
     }
 
