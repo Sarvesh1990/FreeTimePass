@@ -8,7 +8,7 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
 /**
  * Created by apple on 15/12/17.
  */
-public class MyLRU <K, V> implements LRU<K, V>{
+public class MyLRU <K, V> implements LRU<K, V>, LRU2<K,V>{
     private LRUMap<K, V> lruMap;
     private ReentrantLock lock = new ReentrantLock();
 

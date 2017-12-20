@@ -1,0 +1,15 @@
+Scrabble :
+1. Scrabble board - 15x15 matrix of characters, 15x15 matrix of points
+2. Points - Double letter, Triple letter, Double word, Triple Word
+3. Letters - Value of letters
+4. Scrabble bag - List of letters. Functions : Get letters from bag, Swap letters from bag,
+5. Player - Name, Current points, Current letters. Function : getLettersFromScabble,
+6. Game - Count of players playing, Players list who are playing, Scrabble Board, Scrabble Bag, Current player. Function : Start game, Decide winner. Allocate 7 letters to each.
+8. Points calculator - Takes scrabble board. Return points
+
+1. Game start - Register players
+2. Get one letter each from scrabble bag for each player and compare
+3. Winner decided. Winner forms a word from centre. API to place a letter. API to finish.
+
+
+
