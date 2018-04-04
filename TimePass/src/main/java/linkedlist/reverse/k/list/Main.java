@@ -2,7 +2,6 @@ package linkedlist.reverse.k.list;
 
 import linkedlist.LinkedList;
 import linkedlist.Node;
-import sun.awt.image.ImageWatched;
 
 /**
  * Created by sarvesh on 5/4/17.

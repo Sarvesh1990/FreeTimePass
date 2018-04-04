@@ -4,7 +4,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static java.lang.Math.min;
-import static sun.swing.MenuItemLayoutHelper.max;
 
 /**
  * Created by apple on 25/02/17.
