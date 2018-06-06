@@ -7,7 +7,7 @@ import java.util.Arrays;
  */
 public class Main {
     public static void main(String[] args) {
-        int[] number = new int[] {9, 1, 1};
+        int[] number = new int[] {9, 2, 1};
         findGreatestDivisibleThree(number);
     }
 
@@ -18,7 +18,7 @@ public class Main {
             sum = sum + number[i];
         }
         if(sum % 3 == 0) {
-            System.out.println(number);
+            System.out.println(number[0] + " " + number[1] + " " + number[2]);
         }  else {
             boolean found = false;
             for (int i = number.length -1 ; i >= 0; i--) {
