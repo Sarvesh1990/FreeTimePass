@@ -1,4 +1,4 @@
-package arrays.addition;
+package arrays.addition.array;
 
 /**
  * Created by apple on 26/02/17.

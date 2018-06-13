@@ -1,4 +1,4 @@
-package arrays.sum.of.three.zero;
+package arrays.sum.of.three.zero.check;
 
 import java.util.Arrays;
 
