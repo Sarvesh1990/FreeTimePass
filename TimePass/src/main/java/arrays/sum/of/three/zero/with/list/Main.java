@@ -7,13 +7,14 @@ import java.util.*;
  */
 
 /* Sort the array as it is n^2 and sorting can be done in nLogn. Sorting will help us avoid duplicates very easily
-    After sorting start with i==0, skip if number same as i-1 and call for sumTwo. In sumTwo remove both number and other number from map.
-    Also check while traversing if map contains number.
+    After sorting start with i==0, skip if number same as i-1 and call for sumTwo.
+    SumTwo starts with i = arrayIndex and end = nums.length - 1 and keep checking sum. Depending on sum value with needed target to you
+    move start or end. Since we need to avoid duplicates keep moving till you find same
  */
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println(threeSum(new int[] {0, 0, 0}));
+        System.out.println(threeSum(new int[] {0, 0, 0, 0, 0}));
 
     }
 
@@ -23,7 +24,7 @@ public class Main {
 
         for(int i = 0; i < nums.length - 2; i++) {
             if(i == 0 || nums[i] != nums[i - 1]) {
-                List<List<Integer>> duplets = sumOfTwo(nums, i + 1, nums[i]);
+                List<List<Integer>> duplets = sumOfTwo(nums, i + 1, 0 - nums[i]);
                 if(duplets.size() > 0) {
                     for(List<Integer> duplet : duplets) {
                         duplet.add(nums[i]);
@@ -36,24 +37,39 @@ public class Main {
     }
 
     private static List<List<Integer>> sumOfTwo(int[] nums, int arrayIndex, int sumValue) {
-        Map<Integer, Integer> numPos = new HashMap<>();
+        int start = arrayIndex;
+        int end = nums.length - 1;
+
         List<List<Integer>> duplets = new LinkedList<>();
-        for(int i = arrayIndex; i < nums.length; i++) {
-                numPos.put(nums[i], i);
+
+        while(end > start) {
+            if(nums[start] + nums[end] == sumValue) {
+                List<Integer> duplet = new LinkedList<>();
+                duplet.add(nums[start]);
+                duplet.add(nums[end]);
+                duplets.add(duplet);
+                while(start < nums.length - 1 && nums[start + 1] == nums[start]) {
+                    start++;
+                }
+                start++;
+
+                while(end > 0 && nums[end - 1] == nums[end]) {
+                    end--;
+                }
+                end--;
+            } else if (nums[start] + nums[end] > sumValue) {
+                while(end > 0 && nums[end - 1] == nums[end]) {
+                    end--;
+                }
+                end--;
+            } else {
+                while(start < nums.length - 1 && nums[start + 1] == nums[start]) {
+                    start++;
+                }
+                start++;
+            }
         }
 
-        for(int i = arrayIndex; i < nums.length; i++) {
-            if(numPos.containsKey(nums[i]) && numPos.containsKey(-(sumValue) - nums[i]) && numPos.get(-(sumValue) - nums[i]) != i) {
-                List<Integer> duplet = new LinkedList<>();
-                duplet.add(nums[i]);
-                duplet.add(-(sumValue) - nums[i]);
-                duplets.add(duplet);
-            }
-            numPos.remove(nums[i]);
-            if(nums[i] != -(sumValue) - nums[i]) {
-                numPos.remove(-(sumValue) - nums[i]);
-            }
-        }
         return duplets;
     }
 }
