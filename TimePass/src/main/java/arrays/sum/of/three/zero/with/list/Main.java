@@ -1,4 +1,4 @@
-package arrays.sum.of.two.zero;
+package arrays.sum.of.three.zero.with.list;
 
 import java.util.*;
 
