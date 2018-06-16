@@ -1,4 +1,4 @@
-package linkedlist.reverse.k.list;
+package linkedlist.reverse.k.list.reverse;
 
 import linkedlist.LinkedList;
 import linkedlist.Node;
