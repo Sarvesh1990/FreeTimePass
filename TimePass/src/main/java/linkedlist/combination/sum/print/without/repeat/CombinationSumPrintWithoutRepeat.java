@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 /*
-In this we include recursive approach as we have to print values without repeat. DP won't work here.
+In this we include ReverseRecursive approach as we have to print values without repeat. DP won't work here.
  */
 
 public class CombinationSumPrintWithoutRepeat {
