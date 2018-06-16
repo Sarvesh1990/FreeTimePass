@@ -2,6 +2,9 @@ package linkedlist.rotate.list.by.k;
 
 import linkedlist.ListNode;
 
+/*
+Go to point from where we need to rotate. Now cut from there and move to front
+ */
 public class RotateListWithoutRecursive {
     public static void main(String[] args) {
         RotateListWithoutRecursive rr = new RotateListWithoutRecursive();
