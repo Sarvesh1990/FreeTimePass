@@ -3,7 +3,14 @@ package arrays.two.stocks;
 /**
  * Created by apple on 20/03/17.
  */
-public class Main {
+
+/*
+Find max profit earned by buying and selling two stocks.
+First calculate maxProfit earned if we sell the stock on or before that day. Build MaxProfitArray. For that keep count of currentMin and check
+diff with currentI. If less than maxProfit -> MakemaxProfit. Fill array.
+Now start from end and get how much profit can be earned if we sell stock from end. Add profit till that point and calculate maxProfit total.
+ */
+public class MaxProfitSellTwoStocks {
     public static void main(String[] args) {
         int[] stockPrices = new int[] {12, 14, 17, 10, 14, 13, 12, 15};
         System.out.println(maximumStockPrices(stockPrices));

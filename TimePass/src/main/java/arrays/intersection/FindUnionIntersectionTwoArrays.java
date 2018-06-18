@@ -3,12 +3,16 @@ package arrays.intersection;
 /**
  * Created by apple on 12/03/17.
  */
-public class Main {
+/*
+Sort array
+ */
+
+public class FindUnionIntersectionTwoArrays {
     public static void main(String[] args) {
         int[] array1 = new int[] {1, 3, 4, 5, 7};
         int[] array2 = new int[] {0, 9};
 
-        findUnion(array1, array2);
+        findIntersection(array1, array2);
     }
 
     private static void findIntersection(int[] array1, int[] array2) {

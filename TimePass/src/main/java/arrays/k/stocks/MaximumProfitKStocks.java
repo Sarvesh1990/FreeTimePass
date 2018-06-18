@@ -6,7 +6,14 @@ import java.util.jar.Pack200;
 /**
  * Created by apple on 20/03/17.
  */
-public class Main {
+
+/*
+Same like k = 2. Keep creating maxProfitArray for every k. For example if k = 3, Create maxProfitArray for k = 1. Here use first array
+to get maxProfit if sold on ith day or before. Using that create for k = 2. Use previous created to get maxProfit if sold on
+ith day or before twice.
+To create array, Start from end and use end part and k = 1 part. Using k = 2 part, create for k = 3;
+ */
+public class MaximumProfitKStocks {
     public static void main(String[] args) {
         int[] stockPrices = new int[] {12, 14, 17, 10, 14, 13, 12, 15};
         System.out.print(maxProfit(3, stockPrices));

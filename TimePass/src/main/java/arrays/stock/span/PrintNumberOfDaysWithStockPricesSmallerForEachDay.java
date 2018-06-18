@@ -5,7 +5,12 @@ import java.util.Stack;
 /**
  * Created by apple on 24/04/17.
  */
-public class Main {
+
+/*
+For each day, print how many days stock prices were smaller than today
+Loop for each day. Make j = i - 1. While (j >= 0), if(array[j] < array[i]) -> increase span by span[j], make j = j - span[j]
+ */
+public class PrintNumberOfDaysWithStockPricesSmallerForEachDay {
     public static void main(String[] args) {
         int[] array = new int[] {10, 4, 5, 90, 120, 80, 125};
         stockSpan(array);

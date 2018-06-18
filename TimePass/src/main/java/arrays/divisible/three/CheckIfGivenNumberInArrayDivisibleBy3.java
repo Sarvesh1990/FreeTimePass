@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * Created by sarvesh on 12/3/17.
  */
-public class Main {
+public class CheckIfGivenNumberInArrayDivisibleBy3 {
     public static void main(String[] args) {
         int[] number = new int[] {9, 2, 1};
         findGreatestDivisibleThree(number);
