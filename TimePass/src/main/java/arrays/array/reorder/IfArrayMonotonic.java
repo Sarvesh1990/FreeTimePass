@@ -3,7 +3,11 @@ package arrays.array.reorder;
 /**
  * Created by apple on 15/05/17.
  */
-public class Main {
+
+/*
+Decide monotonicity first
+ */
+public class IfArrayMonotonic {
     public static void main(String[] args) {
         String[] array1 = new String[5];
         array1[0] = "B";
@@ -12,7 +16,7 @@ public class Main {
         array1[3] = "A";
         array1[4] = "D";
 
-        int[] array2 = new int[] {3, 4, 4, 1};
+        int[] array2 = new int[] {3, 4, 4, 5};
 
 //        reorderArray(array1, array2);
 

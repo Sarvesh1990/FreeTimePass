@@ -3,9 +3,14 @@ package arrays.contiguous.sum.n;
 /**
  * Created by apple on 19/02/17.
  */
-public class Main {
+
+/*
+Keep increasing i. If sum == target, check for maxSize. Increase movingIndex by 1 and decrease sum by array[movingIndex].
+If Sum > target, move j. if sum == target, check maxSize, break. If < target, break. Set movingIndex = j
+ */
+public class LargetstContiguousArrayWithSumTarget {
     public static void main(String[] args) {
-        int[] array = {1, 2, 4, 2, 3, 1, 6};
+        int[] array = {1, 2, 4, 3, 2, 1, 1, 2, 6};
         System.out.println(printIndex(array, 6));
     }
 
@@ -22,8 +27,8 @@ public class Main {
                     if(maxSize < i - movingIndex) {
                         maxSize = i - movingIndex;
                     }
-                    currentSum = 0;
-                    movingIndex = i + 1;
+                    currentSum = currentSum - array[movingIndex];
+                    movingIndex++;
                 } else {
                     for(int j = movingIndex + 1; j <= i + 1; j++) {
                         currentSum = currentSum - array[j-1];
@@ -31,8 +36,7 @@ public class Main {
                             if(maxSize < i - j) {
                                 maxSize = i - j;
                             }
-                            currentSum = 0;
-                            movingIndex = i + 1;
+                            movingIndex = j;
                             break;
                         } else if (currentSum < sum) {
                             movingIndex = j;

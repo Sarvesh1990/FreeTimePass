@@ -3,7 +3,7 @@ package arrays.delta.encoding;
 /**
  * Created by sarvesh on 11/3/17.
  */
-public class Main {
+public class DeltaEncoding {
     public static void main(String[] args) {
         int[] array = new int[] {25626, 25757, 24367, 24267, 16, 100, 2, 7277};
         deltaEncoding(array);

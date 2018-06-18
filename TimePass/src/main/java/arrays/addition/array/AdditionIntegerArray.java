@@ -3,7 +3,7 @@ package arrays.addition.array;
 /**
  * Created by apple on 26/02/17.
  */
-public class Main {
+public class AdditionIntegerArray {
     public static void main(String[] args) {
         add(new int[] {4, 2, 3}, new int[] {9, 9, 8, 3, 9});
     }
@@ -13,7 +13,7 @@ public class Main {
         int num1Pos = num1.length - 1;
         int num2Pos = num2.length - 1;
 
-        int[] finalArray = new int[num1.length + num2.length + 2];
+        int[] finalArray = new int[num1.length + num2.length + 1];
         int finalArrayPos = finalArray.length - 1;
 
         while(num1Pos >= 0 || num2Pos >= 0) {

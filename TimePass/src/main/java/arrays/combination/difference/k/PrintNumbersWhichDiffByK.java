@@ -3,7 +3,7 @@ package arrays.combination.difference.k;
 /**
  * Created by sarvesh on 7/3/17.
  */
-public class Main {
+public class PrintNumbersWhichDiffByK {
     public static void main(String[] args) {
         int[] array = new int[] {1, 2, 4, 4, 6, 8, 10, 12, 13};
         printCombination(array, 2);
