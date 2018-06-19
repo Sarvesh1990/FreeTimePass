@@ -78,8 +78,10 @@ public class CourseSchedule {
                 if(visited[prerequisites[i][1]]) {
                     return false;
                 } else {
-                    if(!topologicalSort(prerequisites[i][1], visited, prerequisites, visitedNode, list)) {
-                        return false;
+                    if(!visitedNode[prerequisites[i][1]]) {
+                        if (!topologicalSort(prerequisites[i][1], visited, prerequisites, visitedNode, list)) {
+                            return false;
+                        }
                     }
                 }
             }
