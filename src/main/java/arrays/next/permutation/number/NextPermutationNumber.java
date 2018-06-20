@@ -1,6 +1,8 @@
 package arrays.next.permutation.number;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 /*
 Traverse from end. Check if current number is greater than previous. If not - i--. Otherwise sort number from current number till end.
@@ -10,10 +12,21 @@ Then start traversing from current number towards right. As soon as you find a n
 public class NextPermutationNumber {
 
     public static void main(String[] args) {
-        nextPermutation(new int[] {1, 3, 2});
+        int n = 1999999999;
+        ArrayList<Integer> list = new ArrayList<>();
+        while(n > 0) {
+            list.add(0, n % 10);
+            n = n / 10;
+        }
+
+        Integer[] nums = new Integer[list.size()];
+        nums = list.toArray(nums);
+
+        nextPermutation(nums);
     }
 
-    public static void nextPermutation(int[] nums) {
+    public static void nextPermutation(Integer[] nums) {
+
         if(nums == null) {
             return;
         }
@@ -39,9 +52,27 @@ public class NextPermutationNumber {
             }
         }
 
+        int num = 0;
         for(i = 0; i < nums.length; i++) {
-            System.out.print(nums[i]);
+            try {
+                num = addAndCheck(num, num * 9 + nums[i]);
+            } catch (Exception e) {
+                num = -1;
+            }
         }
 
+        System.out.println(num);
+
+    }
+
+    public static int addAndCheck(int x, int y)
+            throws Exception {
+        long s = (long)x + (long)y;
+        System.out.println(x + " " + y);
+        System.out.println(s);
+        if (s < Integer.MIN_VALUE || s > Integer.MAX_VALUE) {
+            throw new Exception("Overflow");
+        }
+        return (int)s;
     }
 }
