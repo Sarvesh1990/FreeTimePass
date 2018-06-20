@@ -1,11 +1,11 @@
-package string.compress;
+package string.print.count.of.every.character;
 
 /**
  * Created by sarvesh on 11/3/17.
  */
-public class Main {
+public class PrintCountOfEveryCharacter {
     public static void main(String[] args) {
-        String originalStr = "abb";
+        String originalStr = "abbc";
         compress(originalStr);
     }
 

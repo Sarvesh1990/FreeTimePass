@@ -1,15 +1,13 @@
-package string.count.palindromes;
+package string.print.telephone.name.from.numbers;
 
-import javax.xml.stream.events.Characters;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.Map;
 
-/**
- * Created by apple on 30/03/17.
- */
-public class Main {
+public class PrintTelephoneNameFromNumbers {
     public static void main(String[] args) {
-        System.out.println(countPalindromes("bbcaacbb"));
-        letterCombinations("20");
+        letterCombinations("21");
     }
 
     public static void letterCombinations(String digits) {
@@ -98,38 +96,4 @@ public class Main {
         System.out.println(currentList);
     }
 
-    private static Integer countPalindromes(String str) {
-        int count = 0;
-        for (int i = 0; i < str.length(); i++) {
-            int j = i - 1;
-            int k = i + 1;
-            while (j >= 0 && k < str.length()) {
-                if (str.charAt(j) == str.charAt(k)) {
-                    count++;
-                    j--;
-                    k++;
-                } else {
-                    break;
-                }
-            }
-        }
-
-        for (int i = 0; i < str.length() - 1; i++) {
-            int j = i - 1;
-            int k = i + 2;
-            if (str.charAt(i) == str.charAt(i + 1)) {
-                count++;
-                while (j >= 0 && k < str.length()) {
-                    if (str.charAt(j) == str.charAt(k)) {
-                        count++;
-                        j--;
-                        k++;
-                    } else {
-                        break;
-                    }
-                }
-            }
-        }
-        return count;
-    }
 }

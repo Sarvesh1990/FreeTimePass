@@ -5,6 +5,10 @@ import java.util.Arrays;
 /**
  * Created by sarvesh on 12/3/17.
  */
+
+/*
+Sort number, keep decreasing from last
+ */
 public class CheckIfGivenNumberInArrayDivisibleBy3 {
     public static void main(String[] args) {
         int[] number = new int[] {9, 2, 1};

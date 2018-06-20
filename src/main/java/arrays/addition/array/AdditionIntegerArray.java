@@ -3,6 +3,10 @@ package arrays.addition.array;
 /**
  * Created by apple on 26/02/17.
  */
+
+/*
+Don't forget to add final carry forward in the end.
+ */
 public class AdditionIntegerArray {
     public static void main(String[] args) {
         add(new int[] {4, 2, 3}, new int[] {9, 9, 8, 3, 9});
