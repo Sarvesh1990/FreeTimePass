@@ -6,9 +6,14 @@ import java.util.PriorityQueue;
 /**
  * Created by apple on 26/02/17.
  */
-public class Main {
+
+/*
+Create heap of size k
+ */
+
+public class KthSmallestLargestInStreamOrArray {
     public static void main(String[] args) {
-        findKthSmallest(new int[] {2, 3, 4, 7, 1, 8, 5, 11}, 6);
+        System.out.println(findKthSmallest(new int[] {2, 3, 4, 7, 1, 8, 5, 11}, 6));
         findKthLargest(new int[] {2, 3, 4, 7, 1, 8, 5, 11}, 6);
     }
 
