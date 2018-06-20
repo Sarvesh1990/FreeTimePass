@@ -1,13 +1,18 @@
-package string.print.telephone.name.from.numbers;
+package string.print.letter.combination.of.phone.number;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;
 
-public class PrintTelephoneNameFromNumbers {
+/*
+Add for i = 0;
+Then for each element add all combination and keep creating new list;
+ */
+
+public class PrintLetterCombinationOfPhoneNumber {
     public static void main(String[] args) {
-        letterCombinations("21");
+        letterCombinations("232");
     }
 
     public static void letterCombinations(String digits) {

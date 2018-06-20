@@ -9,7 +9,7 @@ import java.util.Comparator;
  */
 
 /*
-ConnectedComponentsCount of minimum intervals required to include both start and end;
+Count of minimum intervals required to include both start and end;
 Keep two variable - maxEnd till now (it will serve as currentStart once this series interval is taken) and currentStart.
 if element is greater than both currentStart and maxEnd, increase count and make currentStart maxEnd.
 Also check if element[1] is greater than maxEnd. If yes update maxEnd;
