@@ -3,7 +3,12 @@ package graph.connected.components;
 /**
  * Created by sarvesh on 19/4/17.
  */
-public class Count {
+
+/*
+Run DFS from every vertex if not visited.
+ */
+
+public class ConnectedComponentsCount {
     public static void main(String[] args) {
         int count = 5;
         int[][] edges = new int[count][count];

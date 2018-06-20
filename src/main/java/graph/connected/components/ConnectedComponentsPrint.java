@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * Created by apple on 01/03/17.
  */
-public class Main {
+public class ConnectedComponentsPrint {
     public static void main(String[] args) {
         String str = "acxrabdz";
         int numVertices = str.length();
@@ -35,16 +35,16 @@ public class Main {
 
         ArrayList<LinkedList<Integer>> connectedList = new ArrayList<LinkedList<Integer>>();
         for(int i = 0; i < numVertices; i++) {
-            connectedList.add(new LinkedList<Integer>());
-            dfs(graph, visited, i, numVertices, connectedList.get(i));
+            if(!visited[i]) {
+                connectedList.add(new LinkedList<Integer>());
+                dfs(graph, visited, i, numVertices, connectedList.get(connectedList.size() - 1));
+            }
         }
 
         for(int i = 0; i < connectedList.size(); i++) {
             String connectedComps = "";
-            if(connectedList.get(i).size() > 1) {
-                for(int j = 0; j < connectedList.get(i).size(); j++) {
-                    connectedComps = connectedComps + " " + str.charAt(connectedList.get(i).get(j));
-                }
+            for(int j = 0; j < connectedList.get(i).size(); j++) {
+                connectedComps = connectedComps + " " + str.charAt(connectedList.get(i).get(j));
             }
             System.out.println(connectedComps);
         }
