@@ -7,9 +7,13 @@ import java.util.Map;
 /**
  * Created by apple on 21/03/17.
  */
-public class Main {
+/*
+Given a list of strings and a pattern print all string which matches that pattern.
+ */
+
+public class StringMatchingPattern {
     public static void main(String[] args) {
-        String[] strList = {"abab", "aba", "xyz", "xyx"};
+        String[] strList = {"abab", "aba", "xyz", "xyx", "mnm"};
         matchPattern(strList, "aba");
     }
 

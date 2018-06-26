@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
         String s1 = "aab";
-        String s2 = "c*a*b*bb";
+        String s2 = "*a*b*";
         System.out.println(isMatch(s1, s2));
     }
 

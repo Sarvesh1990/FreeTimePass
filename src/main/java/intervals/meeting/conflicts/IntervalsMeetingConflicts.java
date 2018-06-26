@@ -1,4 +1,4 @@
-package arrays.intervals.meeting.conflicts;
+package intervals.meeting.conflicts;
 
 /*
 Given a list of intervals with start time and end time of meetings, find if there are any conflicts.

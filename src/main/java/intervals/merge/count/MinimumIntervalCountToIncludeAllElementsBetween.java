@@ -1,4 +1,4 @@
-package arrays.intervals.merge.count;
+package intervals.merge.count;
 
 import java.util.ArrayList;
 import java.util.Collections;
