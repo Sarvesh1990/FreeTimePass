@@ -3,14 +3,16 @@ package string.english.integer;
 /**
  * Created by apple on 25/02/17.
  */
-public class Main {
+
+
+public class NumberStringToWords {
     private static String[] ones = {"", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"};
     private static String[] teens = {"Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen"};
     private static String[] tens = {"", "", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"};
     private static String[] thousands = {"", "Thousand", "Million", "Billion"};
 
     public static void main(String[] args) {
-        System.out.println(numberToWords(100));
+        System.out.println(numberToWords(1001));
     }
 
     private static String numberToWords(int num) {

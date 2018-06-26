@@ -6,7 +6,16 @@ import java.util.List;
 /**
  * Created by sarvesh on 6/4/17.
  */
-public class Main {
+
+/*
+Given a dictionary of words and a string, check if string can be broken into multiple words all of which are in dictionary
+Done by DP.
+Start with i = 1 to i = str.length, check if wb[i] = true. If yes, it means till i word can be formed. So in that case check for j = i + 1
+till j = str.length and mark wb[j] = 1 for all possible words after i.
+if wb[i] = false and substring from 0 till i is true, mark wb[i] = true;
+O(n2)
+ */
+public class ProperSentenceUsingStringAndDict {
     public static void main(String[] args) {
         List<String> dict = new LinkedList<>();
         dict.add("leet");
