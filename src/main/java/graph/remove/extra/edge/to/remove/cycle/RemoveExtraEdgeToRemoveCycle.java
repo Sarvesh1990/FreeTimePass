@@ -1,6 +1,16 @@
 package graph.remove.extra.edge.to.remove.cycle;
 
+import graph.adjacency.Graph;
+
 import java.util.*;
+
+/*
+Given a graph which has one extra edge making it cyclic, find that extra edge which when removed makes the graph non-cyclic.
+Classic example of union find.
+Since we can remove any edge of cycle to make it non-cyclic, remove last edge from array.
+Start by picking each edge one by one. As soon as the cyclic formed return the edge. Cycle is formed when ultimate parent of both to and from of edge is same.
+Keep updating ultimate parent if cycle is not formed
+ */
 
 public class RemoveExtraEdgeToRemoveCycle {
     public static void main(String[] args) {
@@ -8,53 +18,44 @@ public class RemoveExtraEdgeToRemoveCycle {
                 {20,39},{7,39},{19,22},{3,17},{15,25},{1,39},{26,40},{5,14},{6,23},{5,6},{31,48},{13,22},{41,44},{10,19},{12,41},
                 {1,12},{3,14},{40,50},{19,37},{16,26},{7,25},{22,33},{21,27},{9,50},{24,42},{43,46},{21,47},{29,40},{31,34},{9,31},
                 {14,31},{5,48},{3,18},{4,19},{8,17},{38,46},{35,37},{17,43}};
+
+//        int[][] edges = new int[][]{{1, 2}, {1, 3}, {2, 3}};
         RemoveExtraEdgeToRemoveCycle re = new RemoveExtraEdgeToRemoveCycle();
-        re.findRedundantConnection(edges);
+
+        int[] redundantEdge = re.findRedundantConnection(edges);
+        System.out.println(redundantEdge[0] + " " + redundantEdge[1]);
     }
 
     public int[] findRedundantConnection(int[][] edges) {
-        for(int i = edges.length - 1; i >= 0; i--) {
-            int tempStart = edges[i][0];
-            int tempEnd = edges[i][1];
-            edges[i][0] = -1;
-            edges[i][1] = -1;
+        int[] parent = new int[edges.length + 1];
+        for(int i = 0; i < parent.length; i++) {
+            parent[i] = -1;
+        }
 
-            boolean[] visited = new boolean[edges.length + 1];
+        for(int i = 0; i < edges.length; i++) {
+            int from = edges[i][0];
+            int to = edges[i][1];
 
-            if(!findLoopNode(edges, edges[0][0], visited, -1, 0, edges.length)) {
-                System.out.println(tempStart + " " + tempEnd);
-                return new int[]{tempStart, tempEnd};
+            if(findUltimateParent(from, parent) == findUltimateParent(to, parent)) {
+                return new int[] {from, to};
             } else {
-                edges[i][0] = tempStart;
-                edges[i][1] = tempEnd;
+                union(from, to, parent);
             }
         }
         return new int[2];
 
     }
 
-    public boolean findLoopNode(int[][] edges, int index, boolean[] visited, int parent, int count, int vertex) {
-        System.out.println("Index " + index);
-        visited[index] = true;
-        count++;
-        for(int i = 0; i < edges.length; i++) {
-            if(edges[i][0] == index || edges[i][1] == index) {
-                int newIndex = edges[i][0] == index ? edges[i][1] : edges[i][0];
-                if(!visited[newIndex]) {
-                    if(findLoopNode(edges, newIndex, visited, index, count, vertex)) {
-                        System.out.println(newIndex + " " + index);
-                        return true;
-                    }
-                } else if (newIndex != parent){
-                    System.out.println(newIndex + " " + index);
-                    return true;
-                }
-            }
-        }
+    private static void union(int from, int to, int[] parent) {
+        int parentFrom = findUltimateParent(from, parent);
+        int parentTo = findUltimateParent(to, parent);
+        parent[parentFrom] = parentTo;
+    }
 
-        if(count == vertex)
-            return false;
-        else
-            return true;
+    private static int findUltimateParent(int vertex, int[] parent) {
+        while(parent[vertex] != -1) {
+            vertex = parent[vertex];
+        }
+        return vertex;
     }
 }

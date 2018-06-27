@@ -5,7 +5,13 @@ import graph.adjacency.Graph;
 /**
  * Created by sarvesh on 12/3/17.
  */
-public class Main {
+
+/*
+For every edge, check if ultimate parent of both vertex of edge is same.
+If yes, return true; Else -> Set parent of of one vertex to parent of other vertex.
+Choose a convention for parent setting to->from
+ */
+public class CheckIfGraphHasCycle {
     public static void main(String[] args) {
         Graph graph = new Graph(4);
         graph.addVertex(0, 1);
