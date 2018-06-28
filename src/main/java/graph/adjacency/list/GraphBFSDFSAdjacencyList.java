@@ -1,19 +1,18 @@
-package graph.adjacency;
+package graph.adjacency.list;
 
 import java.util.LinkedList;
-import java.util.Stack;
 
 /**
  * Created by apple on 27/02/17.
  */
-public class Graph {
+public class GraphBFSDFSAdjacencyList {
     public static LinkedList<Integer>[] graph;
     private static boolean[] bfsVisited;
     private static boolean[] dfsVisited;
     private static boolean[] recStack;
 
 
-    public Graph(int size) {
+    public GraphBFSDFSAdjacencyList(int size) {
         this.graph = new LinkedList[size];
         this.bfsVisited = new boolean[graph.length];
         this.dfsVisited = new boolean[graph.length];
@@ -97,5 +96,22 @@ public class Graph {
         }
         recStack[startNode] = false;
         return false;
+    }
+
+    public static void main(String[] args) {
+        GraphBFSDFSAdjacencyList graph = new GraphBFSDFSAdjacencyList(6);
+        graph.addVertex(0, 1);
+//        graph.addVertex(5, 0);
+        graph.addVertex(2, 1);
+        graph.addVertex(1, 5);
+        graph.addVertex(2, 3);
+        graph.addVertex(3, 4);
+        graph.addVertex(3, 5);
+        graph.addVertex(4, 0);
+//        graph.addVertex(5, 4);
+
+//        graph.bfsQueue(2);
+//        graph.bfsQueue(2);
+        System.out.println(graph.dfsLoop(2));
     }
 }

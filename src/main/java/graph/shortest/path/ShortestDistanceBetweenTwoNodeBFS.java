@@ -5,7 +5,7 @@ import java.util.LinkedList;
 /**
  * Created by sarvesh on 16/3/17.
  */
-public class Main {
+public class ShortestDistanceBetweenTwoNodeBFS {
     public static void main(String[] args) {
         int numVertices = 6;
         int[][] graph = new int[6][6];

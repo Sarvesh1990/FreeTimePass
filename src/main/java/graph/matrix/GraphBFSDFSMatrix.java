@@ -5,7 +5,7 @@ import java.util.LinkedList;
 /**
  * Created by apple on 27/02/17.
  */
-public class Main {
+public class GraphBFSDFSMatrix {
     public static void main(String[] args) {
         int numVertices = 6;
         int[][] graph = new int[6][6];

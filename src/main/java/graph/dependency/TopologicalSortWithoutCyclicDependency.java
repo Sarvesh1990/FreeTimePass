@@ -3,12 +3,20 @@ package graph.dependency;
 /**
  * Created by apple on 23/03/17.
  */
-public class Main {
+
+/*
+Topological sort without cycling. It doesn't consider cyclic dependency
+ */
+public class TopologicalSortWithoutCyclicDependency {
     public static void main(String[] args) {
         int numVertices = 7;
         int[][] dependencyMatrix = new int[numVertices][numVertices];
         dependencyMatrix[0][1] = 1;
+
+        //Doesn't throw error even for this
         dependencyMatrix[0][2] = 1;
+        dependencyMatrix[2][0] = 1;
+
         dependencyMatrix[1][3] = 1;
         dependencyMatrix[2][3] = 1;
         dependencyMatrix[2][4] = 1;

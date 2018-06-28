@@ -3,7 +3,7 @@ package graph.islands.flow;
 /**
  * Created by apple on 28/02/17.
  */
-public class Main {
+public class IslandsFlow {
     public static void main(String[] args) {
         int m = 4;
         int n = 4;
