@@ -1,16 +1,24 @@
-package graph.mst.prim;
+package graph.minimum.spanning.tree.prim;
 
-import graph.mst.Edge;
-import graph.mst.Graph;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+import graph.minimum.spanning.tree.Edge;
+import graph.minimum.spanning.tree.Graph;
 
 /**
  * Created by apple on 13/03/17.
  */
-public class Actual {
+
+/*
+Algorithm
+1) Create a set mstSet that keeps track of vertices already included in MST.
+2) Assign a key value to all vertices in the input graph. Initialize all key values as INFINITE. Assign key value as 0 for the
+first vertex so that it is picked first.
+3) While mstSet doesn’t include all vertices
+….a) Pick a vertex u which is not there in mstSet and has minimum key value.
+….b) Include u to mstSet.
+….c) Update key value of all adjacent vertices of u. To update the key values, iterate through all adjacent vertices. For every adjacent vertex v, if weight of edge u-v is less than the previous key value of v, update the key value as weight of u-v
+ */
+
+public class PrimsMinimumSpanningTree {
     public static void main(String[] args) {
         Graph graph = new Graph(4, 5);
         graph.insertEdge(0, 1, 10);

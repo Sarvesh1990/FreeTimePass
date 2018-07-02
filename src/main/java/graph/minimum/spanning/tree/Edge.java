@@ -1,4 +1,4 @@
-package graph.mst;
+package graph.minimum.spanning.tree;
 
 /**
  * Created by apple on 13/03/17.

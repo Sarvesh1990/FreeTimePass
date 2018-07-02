@@ -6,11 +6,13 @@ import static java.lang.Math.max;
  * Created by apple on 19/03/17.
  */
 
-public class Main {
+
+
+public class KnapSack {
     public static void main(String[] args) {
         int n = 3;
         int[] weight = new int[] {10, 20, 30};
-        int[] value = new int[] {60, 100, 120};
+        int[] value = new int[] {70, 50, 120};
 
         System.out.println(knapsack(weight, value, n, 30));
     }
@@ -23,7 +25,7 @@ public class Main {
                     knapSack[i][j] = 0;
                 } else {
                     if(j >= weight[i - 1]) {
-                        knapSack[i][j] = max(value[i - 1] + knapSack[i - 1][j - weight[i - 1]], knapSack[i - 1][j]);
+                        knapSack[i][j] = max((value[i - 1] + knapSack[i - 1][j - weight[i - 1]]), knapSack[i - 1][j]);
                     } else {
                         knapSack[i][j] = knapSack[i - 1][j];
                     }

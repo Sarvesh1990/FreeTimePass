@@ -5,7 +5,7 @@ import static java.lang.StrictMath.max;
 /**
  * Created by apple on 22/02/17.
  */
-public class Main {
+public class LongestCommonSubSequence {
     public static void main(String[] args) {
         String firstStr = "AGGTABCA";
         String secondStr= "GTXXAYBA";
@@ -25,13 +25,11 @@ public class Main {
             for(int j = 1; j <= secondStr.length(); j++) {
                 if(firstStr.charAt(i - 1) == secondStr.charAt(j - 1)) {
                     subsequenceArrays[i][j] = subsequenceArrays[i - 1][j - 1] + 1;
-                    System.out.println(firstStr.charAt(i - 1) + " " + secondStr.charAt(j - 1) + " " + i + " " + j) ;
                 } else {
                     subsequenceArrays[i][j] = max(subsequenceArrays[i][j-1], subsequenceArrays[i-1][j]);
                 }
             }
         }
-        System.out.println(subsequenceArrays[4][2]);
         System.out.println(subsequenceArrays[firstStr.length()][secondStr.length()]);
     }
 }

@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * Created by apple on 13/03/17.
  */
-public class Main {
+public class GoldMine {
     public static void main(String[] args) {
         int n = 4;
         int m = 4;

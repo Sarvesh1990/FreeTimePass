@@ -3,7 +3,7 @@ package dynamic.planning.coin.change;
 /**
  * Created by apple on 19/03/17.
  */
-public class DP {
+public class CoinChange {
     public static void main(String[] args) {
         int[] coins = new int[] {1, 2, 3};
         int n = 4;

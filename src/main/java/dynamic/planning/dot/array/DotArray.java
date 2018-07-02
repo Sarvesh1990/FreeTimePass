@@ -5,7 +5,7 @@ import static java.lang.Math.max;
 /**
  * Created by apple on 23/02/17.
  */
-public class Main {
+public class DotArray {
     public static void main(String[] args) {
         int[] array1 = new int[] {1, 2, 3, 6, 1, 4};
         int[] array2 = new int[] {4, 5, 1};

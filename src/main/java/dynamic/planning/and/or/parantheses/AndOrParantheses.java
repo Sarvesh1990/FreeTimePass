@@ -3,7 +3,7 @@ package dynamic.planning.and.or.parantheses;
 /**
  * Created by apple on 18/04/17.
  */
-public class Main {
+public class AndOrParantheses {
     public static void main(String[] args) {
         System.out.println(findCount(new boolean[] {true, true, false, true}, new String[] {"or", "and", "xor"}));
     }

@@ -1,14 +1,24 @@
-package graph.mst.kruskal;
+package graph.minimum.spanning.tree.kruskal;
 
-import graph.mst.Edge;
-import graph.mst.Graph;
+import graph.minimum.spanning.tree.Edge;
+import graph.minimum.spanning.tree.Graph;
 
 import java.util.Collections;
 
 /**
  * Created by apple on 13/03/17.
  */
-public class Main {
+
+/*
+1. Sort all the edges in non-decreasing order of their weight.
+2. Pick the smallest edge. Check if it forms a cycle with the spanning tree formed so far. If cycle is not formed, include this edge.
+Else, discard it.
+Use Union Find to find cycle
+3. Repeat step#2 until there are (V-1) edges in the spanning tree.
+
+*/
+
+public class KruksalMinimumSpanningTree {
     public static void main(String[] args) {
         Graph graph = new Graph(4, 5);
         graph.insertEdge(0, 1, 10);
