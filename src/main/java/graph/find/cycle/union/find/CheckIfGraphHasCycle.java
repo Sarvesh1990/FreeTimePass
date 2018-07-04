@@ -1,6 +1,6 @@
 package graph.find.cycle.union.find;
 
-import graph.adjacency.Graph;
+import graph.adjacency.list.GraphBFSDFSAdjacencyList;
 
 /**
  * Created by sarvesh on 12/3/17.
@@ -13,7 +13,7 @@ Choose a convention for parent setting to->from
  */
 public class CheckIfGraphHasCycle {
     public static void main(String[] args) {
-        Graph graph = new Graph(4);
+        GraphBFSDFSAdjacencyList graph = new GraphBFSDFSAdjacencyList(4);
         graph.addVertex(0, 1);
         graph.addVertex(1, 2);
         graph.addVertex(0, 3);
@@ -21,7 +21,7 @@ public class CheckIfGraphHasCycle {
         System.out.println(findIfCycle(graph, 4));
     }
 
-    private static boolean findIfCycle(Graph graph, int vertices) {
+    private static boolean findIfCycle(GraphBFSDFSAdjacencyList graph, int vertices) {
         int[] parent = new int[vertices];
 
         for(int i = 0; i < vertices; i++) {
