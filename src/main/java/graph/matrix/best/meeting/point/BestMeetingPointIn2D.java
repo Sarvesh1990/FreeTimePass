@@ -1,9 +1,18 @@
-package graph.best.meeting.point;
+package graph.matrix.best.meeting.point;
 
 /**
  * Created by apple on 23/04/17.
  */
-public class Main {
+
+/*
+People are standing 2D matrix. Find best meeting point.
+Find for row and column. Check how many people are there in each row and
+use that to decide best row. Distance = row * rowNumber.
+First get distance if bestRow = topRow. Then keep coming down for each row.
+Same ways for row.
+ */
+
+public class BestMeetingPointIn2D {
     public static void main(String[] args) {
         int[][] matrix = new int[3][5];
 

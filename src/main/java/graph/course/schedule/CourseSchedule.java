@@ -20,10 +20,10 @@ public class CourseSchedule {
         int[][] courseDependency = new int[1][2];
         courseDependency[0][0] = 1;
         courseDependency[0][1] = 0;
-        /*courseDependency[1][0] = 1;
+        courseDependency[1][0] = 1;
         courseDependency[1][1] = 2;
         courseDependency[2][0] = 0;
-        courseDependency[2][1] = 2;*/
+        courseDependency[2][1] = 2;
 
         int[] order = cs.canFinish(numCourses, courseDependency);
         for(int i = 0; i < numCourses; i++) {

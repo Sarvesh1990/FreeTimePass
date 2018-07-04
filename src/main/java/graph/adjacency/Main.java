@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
         Graph graph = new Graph(6);
         graph.addVertex(0, 1);
-//        graph.addVertex(5, 0);
+        graph.addVertex(5, 0);
         graph.addVertex(2, 1);
         graph.addVertex(1, 5);
         graph.addVertex(2, 3);

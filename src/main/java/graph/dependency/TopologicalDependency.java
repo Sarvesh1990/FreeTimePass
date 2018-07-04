@@ -3,7 +3,12 @@ package graph.dependency;
 /**
  * Created by apple on 23/03/17.
  */
-public class Main {
+
+/*
+Normal DFS. Print outside loop.
+ */
+
+public class TopologicalDependency {
     public static void main(String[] args) {
         int numVertices = 7;
         int[][] dependencyMatrix = new int[numVertices][numVertices];
