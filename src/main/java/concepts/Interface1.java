@@ -1,5 +1,4 @@
 package concepts;
 
-public interface Interface1 {
-    public void function();
+public interface Interface1 extends Interface2 {
 }
