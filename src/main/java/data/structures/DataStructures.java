@@ -13,7 +13,29 @@ public class DataStructures {
 //        tryTreeMap();
 //        tryTreeSet();
         tryLinkedSet();
+        sort();
     }
+
+    private static void sort() {
+        Collections.sort(new LinkedList<Integer>());
+        LinkedList<Test> list = new LinkedList<>();
+        list.add(new Test(3, "abc"));
+        list.add(new Test(1, "cde"));
+        list.add(new Test(2, "feg"));
+        Collections.sort(list, DataStructures.ValueComp);
+
+        System.out.println(list.removeFirst().value + " " + list.removeFirst().value);
+
+    }
+
+    public static Comparator<Test> ValueComp = new Comparator<Test>() {
+
+        @Override
+        public int compare(Test e1, Test e2) {
+            return e1.value - e2.value;
+        }
+    };
+
 
     private static void tryLinkedSet() {
         Set<Integer> linkedSet = new LinkedHashSet<>();
