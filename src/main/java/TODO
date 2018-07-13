@@ -1,15 +1,18 @@
 https://leetcode.com/problems/mini-parser/description/ - String to nested list
 Check nextPermutation overflow
-Regex - https://www.careercup.com/question?id=5738049735491584 - Regex matching
-Given string, find all possible palindromes permutations
-https://www.careercup.com/question?id=5739353163694080 - Nested data structure
-https://www.careercup.com/question?id=5651181343866880 - Chemical and symbol
 
 Uber
-https://www.careercup.com/question?id=5674368888733696
 https://www.careercup.com/question?id=5813643672289280
 https://www.careercup.com/question?id=5652912574300160
-https://www.careercup.com/page?pid=uber-interview-questions&n=1
+https://www.careercup.com/question?id=5739353163694080 - Nested data structure
+Given string, find all possible palindromes permutations
+Regex - https://www.careercup.com/question?id=5738049735491584 - Regex matching
+https://www.careercup.com/question?id=5189308926394368
+https://www.careercup.com/question?id=5727266179907584
+https://www.careercup.com/question?id=5681594537869312
+https://www.careercup.com/question?id=5686203786461184
+https://www.careercup.com/question?id=5726864308961280
+Sub-String algorithms - KMP, Aho-Corasick
 
 All graph algorithms
 https://www.geeksforgeeks.org/find-k-cores-graph/
