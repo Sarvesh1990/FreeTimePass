@@ -6,13 +6,19 @@ public class A extends B {
     }
 
 
-    public static void doSomething() {
+    @Override
+    public void doSomethingElse() {
+        super.doSomething();
+    }
+
+    public void doSomething() {
+        super.doSomething();
         System.out.println("Do something inside");
     }
 
     public static int count;
 
-    public static synchronized int getCount() {
+    public synchronized static int getCount() {
         return count;
     }
 

@@ -3,7 +3,13 @@ package string.kmp;
 /**
  * Created by sarvesh on 27/3/17.
  */
-public class Main {
+
+/*
+Preprocess pattern, for every index find length of largest prefix which is also suffix.
+Now traverse the string and match pattern. When the character doesn't match, skip the prefix count number of characters as they
+were also suffix.
+ */
+public class PatternSearchKMP {
     public static void main(String[] args) {
         String str = "AABAACAADAAAABA";
         String pat = "AABA";

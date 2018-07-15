@@ -8,7 +8,7 @@ import java.util.Stack;
  */
 public class Main {
     public static void main(String[] args) {
-        B a = new B(10);
+        A a = new A();
         a.doSomething();
     }
 }
