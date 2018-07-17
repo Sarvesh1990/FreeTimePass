@@ -13,7 +13,7 @@ public class PatternSearchKMP {
     public static void main(String[] args) {
         String str = "AABAACAADAAAABA";
         String pat = "AABA";
-        findMatchingIndex(str, pat);
+//        findMatchingIndex(str, pat);
     }
 
     private static void findMatchingIndex(String str, String pat) {
