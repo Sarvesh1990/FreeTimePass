@@ -7,6 +7,10 @@ https://www.careercup.com/question?id=5674107183038464
 https://www.careercup.com/question?id=5645065735110656
 https://leetcode.com/problems/mini-parser/description/ - String to nested list
 Sub-String algorithms - KMP, Aho-Corasick
+Char/Int/Pointer memory requirementsChar/Int/Pointer memory requirements
+Twitter, Logger Implementation, LRU Cache, API Rate limiter - https://konghq.com/blog/how-to-design-a-scalable-rate-limiting-algorithm/
+Influx database, Time series data
+Mysql master/slave, Mysql pool, Redis cluster
 
 HR Questions :
 Best project
