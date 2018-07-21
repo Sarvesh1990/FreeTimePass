@@ -11,11 +11,13 @@ in that direction only for shortest path unless you hit a wall.
 //3 -> left
 public class ShortestPathWithWallsFixedDirection {
     public static void main(String[] args) {
-        int[][][] matrix = new int[2][2][4];
+        int[][][] matrix = new int[3][3][4];
         matrix[0][0][1] = 1;
+        matrix[2][1][1] = 1;
+        matrix[1][1][0] = 1;
 
         ShortestPathWithWallsFixedDirection sp = new ShortestPathWithWallsFixedDirection();
-        System.out.println(sp.findShortestPath(matrix, new int[] {0, 0}, new int[] {1, 1}));
+        System.out.println(sp.findShortestPath(matrix, new int[] {0, 0}, new int[] {2, 2}));
     }
 
     public int findShortestPath(int[][][] matrix, int[] source, int[] destination) {
@@ -42,7 +44,9 @@ public class ShortestPathWithWallsFixedDirection {
     }
 
     public int findShortestPathHelper(int[][][] matrix, int[] source, int[] destination, int direction, int[][][] minSteps) {
+        System.out.println("Direction : " + direction);
         if(source[0] == destination[0] && source[1] == destination[1]) {
+            minSteps[source[0]][source[1]][direction] = 0;
             return 0;
         }
 
@@ -50,22 +54,19 @@ public class ShortestPathWithWallsFixedDirection {
             int minTop = 0;
             if (source[0] > 0 && matrix[source[0]][source[1]][0] != 1) {
                 if (minSteps[source[0] - 1][source[1]][0] == -2) {
-                    minTop = findShortestPathHelper(matrix, new int[]{source[0] - 1, source[1]}, destination, 0, minSteps);
-                } else {
-                    minTop = minSteps[source[0] - 1][source[1]][0] != -1 ? minSteps[source[0] - 1][source[1]][0] + 1 : -1;
+                    findShortestPathHelper(matrix, new int[]{source[0] - 1, source[1]}, destination, 0, minSteps);
                 }
+                minTop = minSteps[source[0] - 1][source[1]][0] != -1 ? minSteps[source[0] - 1][source[1]][0] + 1 : -1;
             } else if (source[1] < matrix[0].length - 1 && matrix[source[0]][source[1]][1] != 1) {
                 if (minSteps[source[0]][source[1] + 1][1] == -2) {
-                    minTop = findShortestPathHelper(matrix, new int[]{source[0], source[1] + 1}, destination, 1, minSteps);
-                } else {
-                    minTop = minSteps[source[0]][source[1] + 1][1] != -1 ? minSteps[source[0]][source[1] + 1][1] + 1 : -1;
+                    findShortestPathHelper(matrix, new int[]{source[0], source[1] + 1}, destination, 1, minSteps);
                 }
-            } else if (source[0] < matrix.length - 1 && matrix[source[0]][source[1]][2] != 1) {
-                if (minSteps[source[0] + 1][source[1]][2] == -2) {
-                    minTop = findShortestPathHelper(matrix, new int[]{source[0] + 1, source[1]}, destination, 2, minSteps);
-                } else {
-                    minTop = minSteps[source[0] + 1][source[1]][2] != -1 ? minSteps[source[0] + 1][source[1]][2] + 1 : -1;
+                minTop = minSteps[source[0]][source[1] + 1][1] != -1 ? minSteps[source[0]][source[1] + 1][1] + 1 : -1;
+            } else if (source[1] > 0 && matrix[source[0]][source[1]][3] != 1) {
+                if (minSteps[source[0]][source[1] - 1][3] == -2) {
+                    findShortestPathHelper(matrix, new int[]{source[0], source[1] - 1}, destination, 3, minSteps);
                 }
+                minTop = minSteps[source[0]][source[1] - 1][3] != -1 ? minSteps[source[0]][source[1] - 1][3] + 1 : -1;
             } else {
                 minTop = -1;
             }
@@ -77,22 +78,19 @@ public class ShortestPathWithWallsFixedDirection {
             int minRight = 0;
             if (source[1] < matrix[0].length - 1 && matrix[source[0]][source[1]][1] != 1) {
                 if (minSteps[source[0]][source[1] + 1][1] == -2) {
-                    minRight = findShortestPathHelper(matrix, new int[]{source[0], source[1] + 1}, destination, 1, minSteps);
-                } else {
-                    minRight = minSteps[source[0]][source[1] + 1][1] != -1 ? minSteps[source[0]][source[1] + 1][1] + 1 : -1;
+                    findShortestPathHelper(matrix, new int[]{source[0], source[1] + 1}, destination, 1, minSteps);
                 }
+                minRight = minSteps[source[0]][source[1] + 1][1] != -1 ? minSteps[source[0]][source[1] + 1][1] + 1 : -1;
             } else if (source[0] < matrix.length - 1 && matrix[source[0]][source[1]][2] != 1) {
                 if (minSteps[source[0] + 1][source[1]][2] == -2) {
-                    minRight = findShortestPathHelper(matrix, new int[]{source[0] + 1, source[1]}, destination, 2, minSteps);
-                } else {
-                    minRight = minSteps[source[0] + 1][source[1]][2] != -1 ? minSteps[source[0] + 1][source[1]][2] + 1 : -1;
+                    findShortestPathHelper(matrix, new int[]{source[0] + 1, source[1]}, destination, 2, minSteps);
                 }
-            } else if (source[1] > 0 && matrix[source[0]][source[1]][3] != 1) {
-                if (minSteps[source[0]][source[1] - 1][3] == -2) {
-                    minRight = findShortestPathHelper(matrix, new int[]{source[0], source[1] - 1}, destination, 3, minSteps);
-                } else {
-                    minRight = minSteps[source[0]][source[1] - 1][3] != -1 ? minSteps[source[0]][source[1] - 1][3] + 1 : -1;
+                minRight = minSteps[source[0] + 1][source[1]][2] != -1 ? minSteps[source[0] + 1][source[1]][2] + 1 : -1;
+            } else if (source[0] > 0 && matrix[source[0]][source[1]][0] != 1) {
+                if (minSteps[source[0] - 1][source[1]][0] == -2) {
+                    findShortestPathHelper(matrix, new int[]{source[0] - 1, source[1]}, destination, 0, minSteps);
                 }
+                minRight = minSteps[source[0] - 1][source[1]][0] != -1 ? minSteps[source[0] - 1][source[1]][0] + 1 : -1;
             } else {
                 minRight = -1;
             }
@@ -104,22 +102,19 @@ public class ShortestPathWithWallsFixedDirection {
             int minBottom = 0;
             if (source[0] < matrix.length - 1 && matrix[source[0]][source[1]][2] != 1) {
                 if (minSteps[source[0] + 1][source[1]][2] == -2) {
-                    minBottom = findShortestPathHelper(matrix, new int[]{source[0] + 1, source[1]}, destination, 2, minSteps);
-                } else {
-                    minBottom = minSteps[source[0] + 1][source[1]][2] != -1 ? minSteps[source[0] + 1][source[1]][2] + 1 : -1;
+                    findShortestPathHelper(matrix, new int[]{source[0] + 1, source[1]}, destination, 2, minSteps);
                 }
+                minBottom = minSteps[source[0] + 1][source[1]][2] != -1 ? minSteps[source[0] + 1][source[1]][2] + 1 : -1;
             } else if (source[1] > 0 && matrix[source[0]][source[1]][3] != 1) {
                 if (minSteps[source[0]][source[1] - 1][3] == -2) {
-                    minBottom = findShortestPathHelper(matrix, new int[]{source[0], source[1] - 1}, destination, 3, minSteps);
-                } else {
-                    minBottom = minSteps[source[0]][source[1] - 1][3] != -1 ? minSteps[source[0]][source[1] - 1][3] + 1 : -1;
+                    findShortestPathHelper(matrix, new int[]{source[0], source[1] - 1}, destination, 3, minSteps);
                 }
-            } else if (source[0] > 0 && matrix[source[0]][source[1]][0] != 1) {
-                if (minSteps[source[0] - 1][source[1]][0] == -2) {
-                    minBottom = findShortestPathHelper(matrix, new int[]{source[0] - 1, source[1]}, destination, 0, minSteps);
-                } else {
-                    minBottom = minSteps[source[0] - 1][source[1]][0] != -1 ? minSteps[source[0] - 1][source[1]][0] + 1 : -1;
+                minBottom = minSteps[source[0]][source[1] - 1][3] != -1 ? minSteps[source[0]][source[1] - 1][3] + 1 : -1;
+            } else if (source[1] < matrix[0].length - 1 && matrix[source[0]][source[1]][1] != 1) {
+                if (minSteps[source[0]][source[1] + 1][1] == -2) {
+                    findShortestPathHelper(matrix, new int[]{source[0], source[1] + 1}, destination, 1, minSteps);
                 }
+                minBottom = minSteps[source[0]][source[1] + 1][1] != -1 ? minSteps[source[0]][source[1] + 1][1] + 1 : -1;
             } else {
                 minBottom = -1;
             }
@@ -131,22 +126,19 @@ public class ShortestPathWithWallsFixedDirection {
             int minLeft = 0;
             if (source[1] > 0 && matrix[source[0]][source[1]][3] != 1) {
                 if (minSteps[source[0]][source[1] - 1][3] == -2) {
-                    minLeft = findShortestPathHelper(matrix, new int[]{source[0], source[1] - 1}, destination, 3, minSteps);
-                } else {
-                    minLeft = minSteps[source[0]][source[1] - 1][3] != -1 ? minSteps[source[0]][source[1] - 1][3] + 1 : -1;
+                    findShortestPathHelper(matrix, new int[]{source[0], source[1] - 1}, destination, 3, minSteps);
                 }
+                minLeft = minSteps[source[0]][source[1] - 1][3] != -1 ? minSteps[source[0]][source[1] - 1][3] + 1 : -1;
             } else if (source[0] > 0 && matrix[source[0]][source[1]][0] != 1) {
                 if (minSteps[source[0] - 1][source[1]][0] == -2) {
-                    minLeft = findShortestPathHelper(matrix, new int[]{source[0] - 1, source[1]}, destination, 0, minSteps);
-                } else {
-                    minLeft = minSteps[source[0] - 1][source[1]][0] != -1 ? minSteps[source[0] - 1][source[1]][0] + 1 : -1;
+                    findShortestPathHelper(matrix, new int[]{source[0] - 1, source[1]}, destination, 0, minSteps);
                 }
-            } else if (source[1] < matrix[0].length - 1 && matrix[source[0]][source[1]][1] != 1) {
-                if (minSteps[source[0]][source[1] + 1][1] == -2) {
-                    minLeft = findShortestPathHelper(matrix, new int[]{source[0], source[1] + 1}, destination, 1, minSteps);
-                } else {
-                    minLeft = minSteps[source[0]][source[1] + 1][1] != -1 ? minSteps[source[0]][source[1] + 1][1] + 1 : -1;
+                minLeft = minSteps[source[0] - 1][source[1]][0] != -1 ? minSteps[source[0] - 1][source[1]][0] + 1 : -1;
+            } else if (source[0] < matrix.length - 1 && matrix[source[0]][source[1]][2] != 1) {
+                if (minSteps[source[0] + 1][source[1]][2] == -2) {
+                    findShortestPathHelper(matrix, new int[]{source[0] + 1, source[1]}, destination, 2, minSteps);
                 }
+                minLeft = minSteps[source[0] + 1][source[1]][2] != -1 ? minSteps[source[0] + 1][source[1]][2] + 1 : -1;
             } else {
                 minLeft = -1;
             }

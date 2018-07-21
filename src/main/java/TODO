@@ -1,12 +1,32 @@
-Uber
-https://www.careercup.com/question?id=5813643672289280 - Concurrent HashMap
-https://www.careercup.com/question?id=5734337711439872 - Paranthesis - Good
-https://www.careercup.com/question?id=5115994033881088 - HashMap
+Facebook:
+Uber code for graph
+For matching find solution online
+Robot question in leetcode
+Decide leetcode - See how many locked
+HR questions list
 https://www.careercup.com/question?id=5674107183038464 - LRU Cache
 https://leetcode.com/problems/mini-parser/description/ - String to nested list
 Sub-String algorithms -  Aho-Corasick
-Twitter, Logger Implementation, LRU Cache, API Rate limiter - https://konghq.com/blog/how-to-design-a-scalable-rate-limiting-algorithm/
 Mysql master/slave, Mysql pool, Redis cluster
+
+Design :
+Four Square design
+Scrabble code
+Ride sharing code
+
+Order :
+Finish leetcode FB/Google algo first
+
+Breakup :
+Weekday :
+Morning -> Algo/Design
+Office -> HR, Careercup, Design concepts
+Night -> Algo
+
+28th/29th July :
+HR mocks with Surbhi. HR final.
+Algo/Design
+
 
 HR Questions :
 Best project
@@ -15,6 +35,9 @@ Best teammate
 Best manager
 Conflicts with manager
 https://www.careercup.com/question?id=5678943987302400
+Manager confrontation
+How do you guide juniors
+Product people vs tech people - How you enforce your ideas
 
 All graph algorithms
 https://www.geeksforgeeks.org/find-k-cores-graph/
