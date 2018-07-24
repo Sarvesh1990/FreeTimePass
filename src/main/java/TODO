@@ -1,13 +1,9 @@
 Facebook:
-Uber code for graph
-For matching find solution online
 Robot question in leetcode
-Decide leetcode - See how many locked
-HR questions list
 https://www.careercup.com/question?id=5674107183038464 - LRU Cache
 https://leetcode.com/problems/mini-parser/description/ - String to nested list
-Sub-String algorithms -  Aho-Corasick
-Mysql master/slave, Mysql pool, Redis cluster
+Find word in Trie, [dot] in place of letter
+Name with email ids given, A and B in same subset if both share a common email id, find unique sets
 Merge intervals
 https://leetcode.com/problems/alien-dictionary/description/
 https://careercup.com/question?id=4871620274421760 - Cut BT for equal sum
@@ -26,7 +22,6 @@ https://careercup.com/question?id=6581919696289792 - Regex matching
 https://careercup.com/question?id=5638654788632576 - Delete k chars from string and make it palindrome
 https://careercup.com/question?id=6350726526664704 - Maximum subset sum of size K
 https://careercup.com/question?id=5454247129776128 - Smallest subarray with sum > k
-https://careercup.com/question?id=5320653514211328 - Decide if contiguous element sum = k
 https://careercup.com/question?id=5907786012557312 - LCA in directed acyclic graph
 https://careercup.com/question?id=5661309784817664 - Stock price variation
 
@@ -35,20 +30,7 @@ Four Square design
 Scrabble code
 Ride sharing code
 Design Google Spreadsheet
-
-Order :
-Finish leetcode FB/Google algo first
-
-Breakup :
-Weekday :
-Morning -> Algo/Design
-Office -> HR, Careercup, Design concepts
-Night -> Algo
-
-28th/29th July :
-HR mocks with Surbhi. HR final.
-Algo/Design
-
+Don Primer for system design
 
 HR Questions :
 Best project
@@ -101,3 +83,27 @@ https://www.geeksforgeeks.org/union-find-algorithm-union-rank-find-optimized-pat
 https://www.geeksforgeeks.org/detect-negative-cycle-graph-bellman-ford/
 https://www.geeksforgeeks.org/detecting-negative-cycle-using-floyd-warshall/
 https://www.geeksforgeeks.org/all-topological-sorts-of-a-directed-acyclic-graph/
+
+Algorithms to read / General Concepts :
+Sub-String algorithms -  Aho-Corasick
+A* algorithm
+Red-Black tree
+AVL Tree
+Mysql master/slave, Mysql pool, Redis cluster / Redis Sentinel
+
+Future:
+Uber code for graph -> Do by BFS
+For matching find solution online
+
+Order :
+Finish leetcode FB/Google algo first
+
+Breakup :
+Weekday :
+Morning -> Algo/Design
+Office -> HR, Careercup, Design concepts
+Night -> Algo
+
+28th/29th July :
+HR mocks with Surbhi. HR final.
+Algo/Design
