@@ -8,7 +8,7 @@ Merge intervals
 https://leetcode.com/problems/alien-dictionary/description/
 https://careercup.com/question?id=4871620274421760 - Cut BT for equal sum
 https://careercup.com/question?id=4911888260399104 - Find max path sum from BT
-https://careercup.com/question?id=5089059251683328 - Balanced paranthesis
+https://careercup.com/question?id=5089059251683328 - Balanced paranthesis. Return all possible results.
 https://careercup.com/question?id=5634222671790080 - String patterns
 https://www.geeksforgeeks.org/move-zeroes-end-array/
 https://careercup.com/question?id=5804910846148608
@@ -24,6 +24,13 @@ https://careercup.com/question?id=6350726526664704 - Maximum subset sum of size 
 https://careercup.com/question?id=5454247129776128 - Smallest subarray with sum > k
 https://careercup.com/question?id=5907786012557312 - LCA in directed acyclic graph
 https://careercup.com/question?id=5661309784817664 - Stock price variation
+Print all root to leaf paths
+Reverse linked list modification??
+Given a string of digits like "121" -> 1 => A, 2 => B, 3 => C. Tell all possible values this string can take. Like ABA, LA, AU
+Given a linked list, determine if its a palindrome without traversal or reversing second half
+Invert a binary tree
+Given a list of caesar shifted string, group them if one can be derived from another
+
 
 Design :
 Four Square design
@@ -58,6 +65,10 @@ Can you tell me about a challenging situation you overcame at work?
 Has there been a time when you had to pitch an idea to a manager or senior leader? What was the outcome?
 Tell me about a time you learned a new skill. How did you approach it and how to did you apply your new learnings?
 What would you bring to the company, to the team?
+Learning curves
+Role as mentor
+Instance of failures
+
 
 
 Behavior concepts :
