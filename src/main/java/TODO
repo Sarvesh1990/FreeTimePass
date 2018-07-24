@@ -13,11 +13,33 @@ Don Primer for system design
 Find word in Trie, [dot] in place of letter
 Stream questions
 Name with email ids given, A and B in same subset if both share a common email id, find unique sets
+Merge intervals
+https://leetcode.com/problems/alien-dictionary/description/
+https://careercup.com/question?id=4871620274421760 - Cut BT for equal sum
+https://careercup.com/question?id=4911888260399104 - Find max path sum from BT
+https://careercup.com/question?id=5089059251683328 - Balanced paranthesis
+https://careercup.com/question?id=5634222671790080 - String patterns
+https://www.geeksforgeeks.org/move-zeroes-end-array/
+https://careercup.com/question?id=5804910846148608
+https://careercup.com/question?id=5759325447389184 - Word array sorted according to ordering array
+https://careercup.com/question?id=6218886813843456 - Space and trees
+https://careercup.com/question?id=5761370824900608 - Dictionary plus palindrome
+https://careercup.com/question?id=6330972072050688 - Reform inplace subarray
+https://careercup.com/question?id=6307070176395264 - Given points, find smallest circle
+https://careercup.com/question?id=5957852828008448 - Find datastructure to support search etc
+https://careercup.com/question?id=6581919696289792 - Regex matching
+https://careercup.com/question?id=5638654788632576 - Delete k chars from string and make it palindrome
+https://careercup.com/question?id=6350726526664704 - Maximum subset sum of size K
+https://careercup.com/question?id=5454247129776128 - Smallest subarray with sum > k
+https://careercup.com/question?id=5320653514211328 - Decide if contiguous element sum = k
+https://careercup.com/question?id=5907786012557312 - LCA in directed acyclic graph
+https://careercup.com/question?id=5661309784817664 - Stock price variation
 
 Design :
 Four Square design
 Scrabble code
 Ride sharing code
+Design Google Spreadsheet
 
 Order :
 Finish leetcode FB/Google algo first
@@ -43,6 +65,21 @@ https://www.careercup.com/question?id=5678943987302400
 Manager confrontation
 How do you guide juniors
 Product people vs tech people - How you enforce your ideas
+Give me a scenario where the requirements were ambiguous, what did you do?
+Why facebook?
+Biggest technical problem?
+https://www.facebook.com/notes/egyptian-recruiter/are-you-prepared-for-tricky-behavioral-interview-questions/359902444038414/
+・How do you resolve conflicts?
+・What would you do differently?
+How do you deal with failure?
+Facebook culture fit => What are facebook values.
+https://www.youtube.com/watch?v=PJKYqLP6MRE - Intro to behaviour interview
+https://www.fastcompany.com/40552335/these-are-facebooks-top-11-questions-for-job-candidates
+Give me an example of a difficult problem you solved. How did you solve this problem?
+Tell me about a mistake that you’ve made. How did you handle it?
+Can you tell me about a challenging situation you overcame at work?
+Has there been a time when you had to pitch an idea to a manager or senior leader? What was the outcome?
+Tell me about a time you learned a new skill. How did you approach it and how to did you apply your new learnings?
 
 All graph algorithms
 https://www.geeksforgeeks.org/find-k-cores-graph/
