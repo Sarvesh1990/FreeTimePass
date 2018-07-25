@@ -9,7 +9,7 @@ import java.util.List;
 public class AlienDict {
     public static void main(String[] args) {
         AlienDict ad = new AlienDict();
-        System.out.println(ad.alienOrder(new String[] {"x", "z", "x"}));
+        System.out.println(ad.alienOrder(new String[] {"z", "z"}));
     }
 
     public String alienOrder(String[] words) {
@@ -37,16 +37,18 @@ public class AlienDict {
 
         for(int i = 0; i < words.length - 1; i++) {
             if(words[i].charAt(0) == words[i + 1].charAt(0)) {
-                wordList.add(words[i].substring(1, words[i].length()));
+                if(words[i].length() > 1)
+                    wordList.add(words[i].substring(1, words[i].length()));
             } else {
-                wordList.add(words[i].substring(1, words[i].length()));
+                if(words[i].length() > 1)
+                    wordList.add(words[i].substring(1, words[i].length()));
                 String[] wordStrArray = wordList.toArray(new String[wordList.size()]);
                 buildDependency(wordStrArray, order, charsIncluded);
                 wordList = new ArrayList<>();
             }
-            System.out.println(wordList);
         }
-        wordList.add(words[words.length - 1].substring(1, words[words.length - 1].length()));
+        if(words[words.length - 1].length() > 1)
+            wordList.add(words[words.length - 1].substring(1, words[words.length - 1].length()));
         String[] wordStrArray = wordList.toArray(new String[wordList.size()]);
         buildDependency(wordStrArray, order, charsIncluded);
     }
@@ -58,7 +60,6 @@ public class AlienDict {
 
         for(int i = 0; i < 26; i++) {
             if(!visited[i] && charsIncluded[i]) {
-                System.out.println(i);
                 int isCyclic = topoSortHelper(order, visited, i, orderList, visitedCurrent);
                 if(isCyclic == -1) {
                     return "";
@@ -71,7 +72,6 @@ public class AlienDict {
 
     private int topoSortHelper(int[][] order, boolean[] visited, int index, List<Character> orderList, boolean[] visitedCurrent) {
         visitedCurrent[index] = true;
-        visited[index] = true;
         for(int i = 0; i < 26; i++) {
             if(order[index][i] == 1 && !visited[i]) {
                 if(visitedCurrent[i]) {
@@ -84,6 +84,7 @@ public class AlienDict {
                 }
             }
         }
+        visited[index] = true;
         visitedCurrent[index] = false;
         orderList.add((char) (index + 'a'));
         return 0;
