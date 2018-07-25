@@ -16,20 +16,19 @@ public class AlienDict {
         int[][] order = new int[26][26];
         boolean[] charsIncluded = new boolean[26];
 
-        buildDependency(words, order, charsIncluded);
+        buildDependency(words, order);
+        buildCharsIncl(words, charsIncluded);
 
         return topoSort(order, charsIncluded);
     }
 
-    private void buildDependency(String[] words, int[][] order, boolean[] charsIncluded) {
+    private void buildDependency(String[] words, int[][] order) {
         if(words.length == 0 || words.length == 1) {
             return;
         }
         for(int i = 0; i < words.length - 1; i++) {
             if(words[i].charAt(0) != words[i + 1].charAt(0)) {
                 order[words[i].charAt(0) - 'a'][words[i + 1].charAt(0) - 'a'] = 1;
-                charsIncluded[words[i].charAt(0) - 'a'] = true;
-                charsIncluded[words[i + 1].charAt(0) - 'a'] = true;
             }
         }
 
@@ -43,14 +42,22 @@ public class AlienDict {
                 if(words[i].length() > 1)
                     wordList.add(words[i].substring(1, words[i].length()));
                 String[] wordStrArray = wordList.toArray(new String[wordList.size()]);
-                buildDependency(wordStrArray, order, charsIncluded);
+                buildDependency(wordStrArray, order);
                 wordList = new ArrayList<>();
             }
         }
         if(words[words.length - 1].length() > 1)
             wordList.add(words[words.length - 1].substring(1, words[words.length - 1].length()));
         String[] wordStrArray = wordList.toArray(new String[wordList.size()]);
-        buildDependency(wordStrArray, order, charsIncluded);
+        buildDependency(wordStrArray, order);
+    }
+
+    private void buildCharsIncl(String[] words, boolean[] chars) {
+        for(String word : words) {
+            for(int i = 0; i < word.length(); i++) {
+                chars[word.charAt(i) - 'a'] = true;
+            }
+        }
     }
 
     private String topoSort(int[][] order, boolean[] charsIncluded) {
