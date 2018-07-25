@@ -6,7 +6,7 @@ import linkedlist.Node;
 /**
  * Created by apple on 25/02/17.
  */
-public class Main {
+public class CheckIfLinkedListPalindromeByReversingMid {
     public static void main(String[] args) {
         LinkedList list = new LinkedList(1);
         list.push(new Node(2));
