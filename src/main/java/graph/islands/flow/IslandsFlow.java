@@ -1,5 +1,10 @@
 package graph.islands.flow;
 
+
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.LinkedList;
+
 /**
  * Created by apple on 28/02/17.
  */
@@ -63,6 +68,8 @@ public class IslandsFlow {
     }
 
     private static void findPacific(int[][] islandHeight, int[][] pacific, int i, int j, int m, int n) {
+        LinkedList<IslandsFlow> list = new LinkedList();
+
         pacific[i][j] = 1;
         if(i - 1 > 0) {
             if(pacific[i - 1][j] == -1 && islandHeight[i - 1][j] > islandHeight[i][j]) {
