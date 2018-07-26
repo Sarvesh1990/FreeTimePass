@@ -4,30 +4,15 @@ https://www.careercup.com/question?id=5674107183038464 - LRU Cache
 https://leetcode.com/problems/mini-parser/description/ - String to nested list
 Find word in Trie, [dot] in place of letter
 Name with email ids given, A and B in same subset if both share a common email id, find unique sets
-https://leetcode.com/problems/alien-dictionary/description/
-https://careercup.com/question?id=4871620274421760 - Cut BT for equal sum
-https://careercup.com/question?id=4911888260399104 - Find max path sum from BT
 https://careercup.com/question?id=5089059251683328 - Balanced paranthesis. Return all possible results.
 https://careercup.com/question?id=5634222671790080 - String patterns
-https://www.geeksforgeeks.org/move-zeroes-end-array/
 https://careercup.com/question?id=5804910846148608
-https://careercup.com/question?id=5759325447389184 - Word array sorted according to ordering array
-https://careercup.com/question?id=6218886813843456 - Space and trees
-https://careercup.com/question?id=5761370824900608 - Dictionary plus palindrome
 https://careercup.com/question?id=6330972072050688 - Reform inplace subarray
-https://careercup.com/question?id=6307070176395264 - Given points, find smallest circle
-https://careercup.com/question?id=5957852828008448 - Find datastructure to support search etc
 https://careercup.com/question?id=6581919696289792 - Regex matching
 https://careercup.com/question?id=5638654788632576 - Delete k chars from string and make it palindrome
-https://careercup.com/question?id=6350726526664704 - Maximum subset sum of size K
-https://careercup.com/question?id=5454247129776128 - Smallest subarray with sum > k
 https://careercup.com/question?id=5907786012557312 - LCA in directed acyclic graph
 https://careercup.com/question?id=5661309784817664 - Stock price variation
-Reverse linked list modification??
 Given a string of digits like "121" -> 1 => A, 2 => B, 3 => C. Tell all possible values this string can take. Like ABA, LA, AU
-Given a linked list, determine if its a palindrome without traversal or reversing second half
-    https://www.geeksforgeeks.org/function-to-check-if-a-singly-linked-list-is-palindrome/
-Given a list of caesar shifted string, group them if one can be derived from another
 
 
 Design :
