@@ -23,6 +23,7 @@ https://leetcode.com/problems/the-skyline-problem/
 https://leetcode.com/problems/minimum-window-substring/description/
 https://leetcode.com/problems/word-ladder/description/
 https://leetcode.com/problems/serialize-and-deserialize-binary-tree/description/
+https://leetcode.com/problems/trapping-rain-water/description/
 Given a string of digits like "121" -> 1 => A, 2 => B, 3 => C. Tell all possible values this string can take. Like ABA, LA, AU
 
 Leetcode : 102
