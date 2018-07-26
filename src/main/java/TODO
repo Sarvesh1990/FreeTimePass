@@ -12,7 +12,17 @@ https://careercup.com/question?id=6581919696289792 - Regex matching
 https://careercup.com/question?id=5638654788632576 - Delete k chars from string and make it palindrome
 https://careercup.com/question?id=5907786012557312 - LCA in directed acyclic graph
 https://careercup.com/question?id=5661309784817664 - Stock price variation
+Bitmap questions
+Median of sorted array
+https://leetcode.com/problems/maximal-rectangle/description/
+https://leetcode.com/problems/regular-expression-matching/
+https://leetcode.com/problems/integer-to-english-words/
+https://leetcode.com/problems/text-justification/description/
+https://leetcode.com/problems/robot-room-cleaner/description/
+https://leetcode.com/problems/multiply-strings/
 Given a string of digits like "121" -> 1 => A, 2 => B, 3 => C. Tell all possible values this string can take. Like ABA, LA, AU
+
+Leetcode : 43
 
 
 Design :
