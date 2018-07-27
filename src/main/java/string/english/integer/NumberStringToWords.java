@@ -26,37 +26,37 @@ public class NumberStringToWords {
         String words = "";
 
         if(num/1000000000 != 0) {
-            words = words + numberToWordsHelper(num/1000000000) + "Billion ";
+            words = numberToWordsHelper(num/1000000000) + "Billion ";
             words = words + numberToWordsHelper(num % 1000000000);
             return words;
         }
 
         if(num/1000000 != 0) {
-            words = words + numberToWordsHelper(num/1000000) + "Million ";
+            words = numberToWordsHelper(num/1000000) + "Million ";
             words = words + numberToWordsHelper(num % 1000000);
             return words;
         }
 
         if(num/1000 != 0) {
-            words = words + numberToWordsHelper(num/1000) + "Thousand ";
+            words = numberToWordsHelper(num/1000) + "Thousand ";
             words = words + numberToWordsHelper(num % 1000);
             return words;
         }
 
         if(num/100 != 0) {
-            words = words + numberToWordsHelper(num/100) + "Hundred ";
+            words = numberToWordsHelper(num/100) + "Hundred ";
             words = words + numberToWordsHelper(num % 100);
             return words;
         }
 
         if(num/10 > 1) {
-            words = words + tens[num/10] + " ";
+            words = tens[num/10] + " ";
             words = words + (ones[num%10] != "" ? ones[num%10] + " " : "");
         } else {
             if(num/10 > 0) {
-                words = words + teens[(num - 10)] + " ";
+                words = teens[(num - 10)] + " ";
             } else {
-                words = words + (ones[num] != "" ? ones[num] + " " : "");
+                words = (ones[num] != "" ? ones[num] + " " : "");
             }
         }
 

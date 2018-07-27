@@ -7,7 +7,7 @@ import java.util.ArrayList;
  */
 public class Main {
     public static void main(String[] args) {
-        multiply("6789", "6788");
+        multiply("2", "7");
     }
 
     private static void multiply(String first, String second) {

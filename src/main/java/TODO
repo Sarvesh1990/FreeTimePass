@@ -1,10 +1,8 @@
 Facebook:
 
 https://www.careercup.com/question?id=5674107183038464 - LRU Cache
-https://leetcode.com/problems/mini-parser/description/ - String to nested list
 Find word in Trie, [dot] in place of letter
 Name with email ids given, A and B in same subset if both share a common email id, find unique sets
-https://leetcode.com/problems/remove-invalid-parentheses/description/
 https://careercup.com/question?id=5634222671790080 - String patterns
 https://careercup.com/question?id=5804910846148608
 https://careercup.com/question?id=6330972072050688 - Reform inplace subarray
@@ -14,20 +12,28 @@ https://careercup.com/question?id=5907786012557312 - LCA in directed acyclic gra
 https://careercup.com/question?id=5661309784817664 - Stock price variation
 Bitmap questions
 Median of sorted array
+https://leetcode.com/problems/remove-invalid-parentheses/description/
 https://leetcode.com/problems/maximal-rectangle/description/
 https://leetcode.com/problems/regular-expression-matching/
-https://leetcode.com/problems/integer-to-english-words/
 https://leetcode.com/problems/text-justification/description/
 https://leetcode.com/problems/robot-room-cleaner/description/
 https://leetcode.com/problems/multiply-strings/
 https://leetcode.com/problems/the-skyline-problem/
-https://leetcode.com/problems/minimum-window-substring/description/
-https://leetcode.com/problems/word-ladder/description/
 https://leetcode.com/problems/serialize-and-deserialize-binary-tree/description/
-https://leetcode.com/problems/trapping-rain-water/description/
+https://leetcode.com/problems/mini-parser/description/ - String to nested list
+https://leetcode.com/problems/palindromic-substrings/description/
+https://leetcode.com/problems/task-scheduler/description/
+https://leetcode.com/problems/sort-colors/description/
+https://leetcode.com/problems/decode-ways/submissions/1
+https://leetcode.com/problems/clone-graph/description/
+https://leetcode.com/problems/expression-add-operators/submissions/1
+https://leetcode.com/problems/simplify-path/description/
+https://leetcode.com/problems/decode-string/submissions/1
+https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/description/
+https://leetcode.com/problems/wildcard-matching/description/
 Given a string of digits like "121" -> 1 => A, 2 => B, 3 => C. Tell all possible values this string can take. Like ABA, LA, AU
 
-Leetcode : 102
+Leetcode : 68
 
 Design :
 Four Square design
