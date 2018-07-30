@@ -16,8 +16,16 @@ https://leetcode.com/problems/mini-parser/description/ - String to nested list
 https://leetcode.com/problems/expression-add-operators/submissions/1
 https://leetcode.com/problems/wildcard-matching/description/
 https://leetcode.com/problems/insert-interval/description/
-
-Leetcode : 404
+https://leetcode.com/problems/exclusive-time-of-functions/description/
+https://leetcode.com/problems/read-n-characters-given-read4-ii-call-multiple-times/description/
+https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/description/
+https://leetcode.com/problems/split-array-largest-sum/description/ -> Copy
+https://leetcode.com/problems/total-hamming-distance/description/
+https://leetcode.com/problems/add-and-search-word-data-structure-design/description/ -> Copy
+https://leetcode.com/problems/maximum-sum-of-3-non-overlapping-subarrays/description/
+https://leetcode.com/problems/contiguous-array/description/
+https://leetcode.com/problems/design-search-autocomplete-system/description/
+https://leetcode.com/problems/accounts-merge/description/
 
 Design System :
 Four Square design
@@ -29,6 +37,7 @@ Design LLD :
 Scrabble code
 Ride sharing code
 https://www.careercup.com/question?id=5674107183038464 - LRU Cache
+URL Shortener - Read about hashing technique (MD5/Base64)
 
 HR Questions :
 https://www.careercup.com/question?id=5678943987302400
