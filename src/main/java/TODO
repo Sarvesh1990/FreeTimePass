@@ -32,6 +32,12 @@ https://leetcode.com/problems/decode-string/submissions/1
 https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/description/
 https://leetcode.com/problems/wildcard-matching/description/
 Given a string of digits like "121" -> 1 => A, 2 => B, 3 => C. Tell all possible values this string can take. Like ABA, LA, AU
+https://leetcode.com/problems/exclusive-time-of-functions/description/
+https://leetcode.com/problems/read-n-characters-given-read4-ii-call-multiple-times/description/
+https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/description/
+https://leetcode.com/problems/split-array-largest-sum/description/ -> Copy
+https://leetcode.com/problems/total-hamming-distance/description/
+https://leetcode.com/problems/add-and-search-word-data-structure-design/description/ -> Copy
 
 Leetcode : 68
 
@@ -41,6 +47,7 @@ Scrabble code
 Ride sharing code
 Design Google Spreadsheet
 https://github.com/donnemartin/system-design-primer
+URL Shortener - Read about hashing technique (MD5/Base64)
 
 HR Questions :
 https://www.careercup.com/question?id=5678943987302400
