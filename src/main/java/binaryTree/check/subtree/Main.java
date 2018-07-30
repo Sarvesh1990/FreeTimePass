@@ -35,11 +35,11 @@ public class Main {
             return false;
         }
 
-        if(head1.value == head2.value) {
-            System.out.println("Value match " + head1.value);
+        if(head1.val == head2.val) {
+            System.out.println("Value match " + head1.val);
             return checkIfSubTree(head1.left, head2.left, head) && checkIfSubTree(head1.right, head2.right, head);
         } else {
-            System.out.println("Value not match " + head1.value);
+            System.out.println("Value not match " + head1.val);
             return checkIfSubTree(head, head2.left, head) || checkIfSubTree(head, head2.right, head);
         }
     }

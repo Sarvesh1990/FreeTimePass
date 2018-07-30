@@ -105,7 +105,7 @@ public class Solution {
         Stack<Integer> s = new Stack<Integer>();
 
         // Initialize current root as minimum possible
-        // value
+        // val
         int root = Integer.MIN_VALUE;
 
         // Traverse given array

@@ -22,7 +22,7 @@ public class BT {
             return;
         }
         print(head.left);
-        System.out.println(head.value + " ");
+        System.out.println(head.val + " ");
         print(head.right);
     }
 
@@ -39,7 +39,7 @@ public class BT {
                 currentNode = currentNode.left;
             } else {
                 Node temp = stack.pop();
-                System.out.println(temp.value + " ");
+                System.out.println(temp.val + " ");
                 currentNode = temp.right;
             }
         }

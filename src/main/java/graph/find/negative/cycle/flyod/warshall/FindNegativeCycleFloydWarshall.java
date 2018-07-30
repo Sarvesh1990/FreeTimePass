@@ -16,7 +16,7 @@ for (k = 0; k < V; k++)
                 {
 
                     // If vertex k is on the shortest path from
-                    // i to j, then update the value of dist[i][j]
+                    // i to j, then update the val of dist[i][j]
                     if (dist[i][k] + dist[k][j] < dist[i][j])
                             dist[i][j] = dist[i][k] + dist[k][j];
                 }

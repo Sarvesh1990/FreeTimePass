@@ -6,7 +6,7 @@ import linkedlist.ListNode;
 Keep two pointers. One previous and one temp. Initialise previous to be head and temp to be head.next.
 Till we get temp == null, we keep traversing. Check if temp.next exist and temp.next.val = temp.val. If yes, remove temp.next.
 If none of the above case if there, check if we need to remove current temp because of duplicate.
-In the end check if we need to remove head value too. That value is not removed in the beginning as we start temp from temp.next;
+In the end check if we need to remove head val too. That val is not removed in the beginning as we start temp from temp.next;
  */
 
 public class RemoveElementsWhichHaveDuplicates {

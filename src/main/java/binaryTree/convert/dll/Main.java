@@ -18,7 +18,7 @@ public class Main {
 
         Node head = convertDll(bt.head);
         while(head != null) {
-            System.out.println(head.value);
+            System.out.println(head.val);
             head = head.right;
         }
     }

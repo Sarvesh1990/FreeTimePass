@@ -8,7 +8,7 @@ import java.util.*;
 
 /* Sort the array as it is n^2 and sorting can be done in nLogn. Sorting will help us avoid duplicates very easily
     After sorting start with i==0, skip if number same as i-1 and call for sumTwo.
-    SumTwo starts with i = arrayIndex and end = nums.length - 1 and keep checking sum. Depending on sum value with needed target to you
+    SumTwo starts with i = arrayIndex and end = nums.length - 1 and keep checking sum. Depending on sum val with needed target to you
     move start or end. Since we need to avoid duplicates keep moving till you find same
  */
 public class Main {

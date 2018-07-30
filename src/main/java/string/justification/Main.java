@@ -9,7 +9,9 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         String str = "a b c d e";
-        System.out.println(justify(str.split(" "), 1));
+
+        System.out.println("-101".substring(1, 2));
+//        System.out.println(justify(str.split(" "), 1));
     }
 
     private static List<String> justify(String[] words, int maxWidth) {

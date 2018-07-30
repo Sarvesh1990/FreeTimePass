@@ -9,7 +9,7 @@ Method 1 :
 
 Method 2 :
 Keep a map of list node with its corresponding copy list node.
-Now match next and arbitrary point. Get of original node and point to value of that node which is next or arbitrary to original node.
+Now match next and arbitrary point. Get of original node and point to val of that node which is next or arbitrary to original node.
  */
 
 public class CloneLinkedListWithNewAndArbitPointerInConstantSpace {

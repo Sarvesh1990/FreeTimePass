@@ -13,7 +13,7 @@ public class Node {
     }
 
     public String toString() {
-        String foo = "key " + key + " value " + value;
+        String foo = "key " + key + " val " + value;
         return foo;
     }
 }

@@ -28,7 +28,7 @@ public class Main {
         String left = printAllSubtrees(head.left);
         String right = printAllSubtrees(head.right);
 
-        signature = (left != null ? left + "+" : "") + head.value + (right != null ? "+" + right : "");
+        signature = (left != null ? left + "+" : "") + head.val + (right != null ? "+" + right : "");
         System.out.println(signature);
         return signature;
     }

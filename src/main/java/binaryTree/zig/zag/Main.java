@@ -33,7 +33,7 @@ public class Main {
 
         boolean printRight = true;
 
-        System.out.println(head.value);
+        System.out.println(head.val);
         s1.push(head);
 
         while(!s1.empty() || !s2.empty()) {
@@ -47,11 +47,11 @@ public class Main {
             if(printRight) {
                 Node node = s1.pop();
                 if(node.right != null) {
-                    System.out.println(node.right.value);
+                    System.out.println(node.right.val);
                     s2.push(node.right);
                 }
                 if(node.left != null) {
-                    System.out.println(node.left.value);
+                    System.out.println(node.left.val);
                     s2.push(node.left);
                 }
             }
@@ -59,11 +59,11 @@ public class Main {
             if(!printRight) {
                 Node node = s2.pop();
                 if(node.left != null) {
-                    System.out.println(node.left.value);
+                    System.out.println(node.left.val);
                     s1.push(node.left);
                 }
                 if(node.right != null) {
-                    System.out.println(node.right.value);
+                    System.out.println(node.right.val);
                     s1.push(node.right);
                 }
             }

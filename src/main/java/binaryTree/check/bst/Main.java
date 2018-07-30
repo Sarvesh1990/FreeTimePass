@@ -27,8 +27,8 @@ public class Main {
         boolean rightIfBST = false;
 
         if(head.left != null) {
-            if(head.left.value > head.value) {
-                System.out.println(head.left.value);
+            if(head.left.val > head.val) {
+                System.out.println(head.left.val);
                 return false;
             }
             leftIfBST = checkIfBST(head.left);
@@ -37,8 +37,8 @@ public class Main {
         }
 
         if(head.right != null) {
-            if(head.right.value < head.value) {
-                System.out.println(head.right.value);
+            if(head.right.val < head.val) {
+                System.out.println(head.right.val);
                 return false;
             }
             rightIfBST = checkIfBST(head.right);

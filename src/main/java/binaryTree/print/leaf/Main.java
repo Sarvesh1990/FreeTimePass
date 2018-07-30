@@ -4,7 +4,6 @@ import binaryTree.BT;
 import binaryTree.Node;
 
 import java.util.LinkedList;
-import java.util.List;
 
 import static java.lang.StrictMath.abs;
 
@@ -32,7 +31,7 @@ public class Main {
             return;
         }
 
-        valueQueue.add(new Depth(head.value, currentDepth));
+        valueQueue.add(new Depth(head.val, currentDepth));
 
         if(currentDepth > maxCount) {
             maxCount = currentDepth;
