@@ -23,9 +23,14 @@ https://leetcode.com/problems/split-array-largest-sum/description/ -> Copy
 https://leetcode.com/problems/total-hamming-distance/description/
 https://leetcode.com/problems/add-and-search-word-data-structure-design/description/ -> Copy
 https://leetcode.com/problems/maximum-sum-of-3-non-overlapping-subarrays/description/
-https://leetcode.com/problems/contiguous-array/description/
 https://leetcode.com/problems/design-search-autocomplete-system/description/
 https://leetcode.com/problems/accounts-merge/description/
+https://leetcode.com/problems/paint-house-ii/description/
+https://leetcode.com/problems/minimum-swaps-to-make-sequences-increasing/description/
+https://leetcode.com/problems/prefix-and-suffix-search/description/
+https://leetcode.com/problems/decode-ways-ii/description/
+https://leetcode.com/problems/largest-plus-sign/description/
+https://leetcode.com/problems/number-of-corner-rectangles/description/
 
 Design System :
 Four Square design
@@ -85,11 +90,16 @@ All interfaces -> Error, Iterable, Comparator, Comparable, Timer, Thread
 Bit operation
 Common Java questions
 
-Timeline
-29th - 10 - 12 (Algo + Java Questions)
-29th Evening - 2 hours (System Design)
-29th Night - 2 hours (1 Algo + Behaviour)
 
 10 weekdays - Morning (Algo + System Design), Night (Algo on paper + Behaviour), Office (Algo + LLD + Java concepts)
+
+Study divide :
+Morning 2 hours
+Office 1 hour
+Night 2 hours
+
+Algo - 1.5 hours normal, 1 hour notebook
+Design - 30 mins reading, 45 mins LLD, 45 mins HLD
+Behavioral - 30 mins
 
 
