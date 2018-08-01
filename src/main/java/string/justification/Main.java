@@ -9,53 +9,74 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         String str = "a b c d e";
-
-        System.out.println("-101".substring(1, 2));
-//        System.out.println(justify(str.split(" "), 1));
+        System.out.println(new Main().fullJustify(str.split(" "), 1));
     }
 
-    private static List<String> justify(String[] words, int maxWidth) {
-        List<String> list = new LinkedList<>();
-        int sum = 0;
-        int start = 0;
-        int sumSpaces = -1;
+    public List<String> fullJustify(String[] words, int maxWidth) {
+        int currentLength = 0;
+        int startIndex = 0;
+        List<String> justifiedList = new LinkedList<>();
+
         for(int i = 0; i < words.length; i++) {
-            sum = sum + words[i].length();
-            sumSpaces = sumSpaces + 1;
-            if(sum + sumSpaces > maxWidth) {
+            if(currentLength + words[i].length() <= maxWidth) {
+                currentLength += words[i].length() + 1;
+            } else {
                 i--;
-                int numWords = i - start + 1;
-                int extraChars = maxWidth - (sum + sumSpaces -1 - words[i+1].length());
-                int space = 0;
-                if(numWords > 1)
-                    space = extraChars/(numWords - 1);
-                String line = "";
-                for(int j = start; j < i; j++) {
-                    line = line + words[j] + " ";
-                    for(int k = 0; k < space; k++) {
-                        line = line + " ";
-                    }
-                    if(extraChars % (numWords - 1) > 0) {
-                        line = line + " ";
-                        extraChars--;
-                    }
-                }
-                line = line + words[i];
-                System.out.println(line);
-                sum = 0;
-                sumSpaces = -1;
-                start = i + 1;
-            }
-            if(i == words.length - 1) {
-                String line = "";
-                for(int j = start; j < words.length - 1; j++) {
-                    line = line + words[j] + " ";
-                }
-                line = line + words[words.length - 1];
-                list.add(line);
+                justify(words, startIndex, i, currentLength - 1, justifiedList, maxWidth);
+                currentLength = 0;
+                startIndex = i + 1;
             }
         }
-        return list;
+
+        StringBuilder lastLine = new StringBuilder();
+        int length = 0;
+        for(int i = startIndex; i < words.length; i++) {
+            lastLine.append(words[i]);
+            length += words[i].length();
+
+            if(i != words.length - 1) {
+                lastLine.append(" ");
+                length += 1;
+            }
+        }
+        while(length < maxWidth) {
+            lastLine.append(" ");
+            length++;
+        }
+
+        justifiedList.add(lastLine.toString());
+
+        return justifiedList;
+    }
+
+    public void justify(String words[], int startIndex, int endIndex, int currentLength, List<String> justifiedList, int maxWidth) {
+        int extraSpaces = maxWidth - currentLength;
+        int wordsCount = (endIndex - startIndex > 0) ? endIndex - startIndex : 1;
+        int extra = extraSpaces % wordsCount;
+
+        StringBuilder justifiedStr = new StringBuilder();
+
+        for(int i = startIndex; i < endIndex; i++) {
+            justifiedStr.append(words[i]);
+            justifiedStr.append(" ");
+            for(int j = 0; j < extraSpaces/wordsCount; j++) {
+                justifiedStr.append(" ");
+            }
+            if((i - startIndex) <= extra - 1) {
+                justifiedStr.append(" ");
+            }
+        }
+
+        justifiedStr.append(words[endIndex]);
+
+        if(startIndex == endIndex) {
+            for(int j = 0; j < extraSpaces; j++) {
+                justifiedStr.append(" ");
+            }
+        }
+
+        justifiedList.add(justifiedStr.toString());
+
     }
 }
 
