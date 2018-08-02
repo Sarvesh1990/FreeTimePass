@@ -1,11 +1,8 @@
 Facebook:
 
-https://careercup.com/question?id=5634222671790080 - String patterns
 https://careercup.com/question?id=5804910846148608
 https://careercup.com/question?id=6330972072050688 - Reform inplace subarray
 https://careercup.com/question?id=6581919696289792 - Regex matching
-https://careercup.com/question?id=5638654788632576 - Delete k chars from string and make it palindrome
-https://careercup.com/question?id=5907786012557312 - LCA in directed acyclic graph
 https://careercup.com/question?id=5661309784817664 - Stock price variation
 https://leetcode.com/problems/remove-invalid-parentheses/description/
 https://leetcode.com/problems/maximal-rectangle/description/
@@ -79,12 +76,14 @@ Red-Black tree
 AVL Tree
 Mysql master/slave, Mysql pool, Redis cluster / Redis Sentinel
 
-Concepts :
+Concepts to read :
 String manipulation -> String to char, Int to string etc
 All interfaces -> Error, Iterable, Comparator, Comparable, Timer, Thread
 Bit operation
 Common Java questions
-
+https://www.elastic.co/blog/found-elasticsearch-as-nosql
+Zookeeper, Consul - Service Discovery, Leader election, Consensus
+All types of databases - Hadoop, Hive, Hbase, ES, Cassandra, MongoDB, InfluxDB
 
 10 weekdays - Morning (Algo + System Design), Night (Algo on paper + Behaviour), Office (Algo + LLD + Java concepts)
 
