@@ -6,22 +6,17 @@ https://careercup.com/question?id=6581919696289792 - Regex matching
 https://careercup.com/question?id=5661309784817664 - Stock price variation
 https://leetcode.com/problems/remove-invalid-parentheses/description/
 https://leetcode.com/problems/maximal-rectangle/description/
-https://leetcode.com/problems/regular-expression-matching/
 https://leetcode.com/problems/expression-add-operators/submissions/1
-https://leetcode.com/problems/wildcard-matching/description/
 https://leetcode.com/problems/read-n-characters-given-read4-ii-call-multiple-times/description/
-https://leetcode.com/problems/split-array-largest-sum/description/ -> Copy
 https://leetcode.com/problems/total-hamming-distance/description/
 https://leetcode.com/problems/add-and-search-word-data-structure-design/description/ -> Copy
 https://leetcode.com/problems/design-search-autocomplete-system/description/
 https://leetcode.com/problems/minimum-swaps-to-make-sequences-increasing/description/
 https://leetcode.com/problems/prefix-and-suffix-search/description/
 https://leetcode.com/problems/decode-ways-ii/description/
-https://leetcode.com/problems/largest-plus-sign/description/
 https://leetcode.com/problems/number-of-corner-rectangles/description/
 
 Design System :
-Four Square design
 Design Google Spreadsheet
 https://github.com/donnemartin/system-design-primer
 Google Doc
@@ -77,23 +72,14 @@ https://www.elastic.co/blog/found-elasticsearch-as-nosql
 Zookeeper, Consul - Service Discovery, Leader election, Consensus
 All types of databases - Hadoop, Hive, Hbase, ES, Cassandra, MongoDB, InfluxDB
 
-10 weekdays - Morning (Algo + System Design), Night (Algo on paper + Behaviour), Office (Algo + LLD + Java concepts)
 
-Study divide :
-Morning 2 hours
-Office 1 hour
-Night 2 hours
+Night (Behavioural finish (Surbhi discuss, Think of example for every scenario, Think of more stories), 1 LLD, 1 HLD, 2 Algos)
 
-Algo - 1.5 hours normal (Morning), 1 hour notebook (Nigh)
-Design - 30 mins reading (Office), 45 mins LLD (Office), 45 mins HLD (Morning)
-Behavioral - 30 mins (Night)
+10/08 - Morning - (1.5 hours) - 1 HLD full, 1 Algo notebook
+10/08 - Before flight - 1 LLD write, 1 Algo
 
+11-12-13/08 - 2 Algo notebook, 2 HLD full, 1 LLD Write, Google/Palantir questions, Reading (LLD/HLD if time)
 
-09/08 - Night - Behavioural half finish, 2 Algos
-10/08 - Leave :
-Morning (2 HLD, 2 Algos)
-Afty (All types of readings finish, 1 LLD, 2 Algos)
-Night (Behavioural finish, 1 LLD, 2 Algos)
-11/08 - Morning - 2 HLD, 2 Algos
-11/08 - Office - 2 Algos
+Keep time for Java internal classes implementations. Keep time for resume revision and tech sheet revision and
+technology to read reading.
 
