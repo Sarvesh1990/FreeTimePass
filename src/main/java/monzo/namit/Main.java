@@ -9,7 +9,7 @@ public class Main {
     }
 
     public static void main(String[] args) throws MalformedURLException {
-        SiteMapCreator siteMapCreator = new SiteMapCreator("https://www.monzo.com", 50);
+        SiteMapCreator siteMapCreator = new SiteMapCreator("https://www.monzo.com", Integer.MAX_VALUE);
         siteMapCreator.run();
         siteMapCreator.printSiteMap();
     }
