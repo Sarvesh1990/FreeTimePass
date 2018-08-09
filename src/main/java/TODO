@@ -7,6 +7,7 @@ https://careercup.com/question?id=5661309784817664 - Stock price variation
 https://leetcode.com/problems/remove-invalid-parentheses/description/
 https://leetcode.com/problems/maximal-rectangle/description/
 https://leetcode.com/problems/expression-add-operators/submissions/1
+https://leetcode.com/problems/read-n-characters-given-read4/description/
 https://leetcode.com/problems/read-n-characters-given-read4-ii-call-multiple-times/description/
 https://leetcode.com/problems/total-hamming-distance/description/
 https://leetcode.com/problems/add-and-search-word-data-structure-design/description/ -> Copy
@@ -14,7 +15,6 @@ https://leetcode.com/problems/design-search-autocomplete-system/description/
 https://leetcode.com/problems/minimum-swaps-to-make-sequences-increasing/description/
 https://leetcode.com/problems/prefix-and-suffix-search/description/
 https://leetcode.com/problems/decode-ways-ii/description/
-https://leetcode.com/problems/number-of-corner-rectangles/description/
 
 Design System :
 Design Google Spreadsheet
@@ -73,10 +73,8 @@ Zookeeper, Consul - Service Discovery, Leader election, Consensus
 All types of databases - Hadoop, Hive, Hbase, ES, Cassandra, MongoDB, InfluxDB
 
 
-Night (Behavioural finish (Surbhi discuss, Think of example for every scenario, Think of more stories), 1 LLD, 1 HLD, 2 Algos)
-
 10/08 - Morning - (1.5 hours) - 1 HLD full, 1 Algo notebook
-10/08 - Before flight - 1 LLD write, 1 Algo
+10/08 - Before flight - 1 LLD write, 1 Algo, Behavioural finish
 
 11-12-13/08 - 2 Algo notebook, 2 HLD full, 1 LLD Write, Google/Palantir questions, Reading (LLD/HLD if time)
 
