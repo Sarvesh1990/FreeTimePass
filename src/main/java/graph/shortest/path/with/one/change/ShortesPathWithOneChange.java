@@ -4,7 +4,7 @@ import java.util.*;
 
 public class ShortesPathWithOneChange {
     public static void main(String[] args) {
-        /*ShortesPathWithOneChange ss = new ShortesPathWithOneChange();
+        ShortesPathWithOneChange ss = new ShortesPathWithOneChange();
         int[][] pathMatrix = new int[3][3];
         pathMatrix[0][0] = 0;
         pathMatrix[0][1] = 0;
@@ -23,12 +23,8 @@ public class ShortesPathWithOneChange {
             }
         } else {
             System.out.println("Path could not be found");
-        }*/
+        }
 
-        int h;
-        String key = "abc";
-        System.out.println((key == null) ? 0 : (h = key.hashCode()) ^ (h >>> 16));
-        System.out.println(5 & 3);
     }
 
 

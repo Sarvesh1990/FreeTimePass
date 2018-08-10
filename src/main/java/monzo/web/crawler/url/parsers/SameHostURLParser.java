@@ -22,6 +22,23 @@ public class SameHostURLParser implements URLParser {
         this.startURL = startUrl;
     }
 
+   /* @Override
+    public Set<URL> getLinkedUrls(URL parentURL) {
+        Document doc = Jsoup.connect(parentURL.toString()).get();
+
+        if(doc.text().contains("research")){
+            System.out.println(URL);
+        }
+
+        //get all links and recursively call the processPage method
+        Elements questions = doc.select("a[href]");
+        for(Element link: questions){
+            if(link.attr("href").contains("mit.edu"))
+                processPage(link.attr("abs:href"));
+        }
+    }*/
+
+
     @Override
     public Set<URL> getLinkedUrls(URL siteUrl) {
         try {
